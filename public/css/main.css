@@ -1,0 +1,30 @@
+.jumbotron, footer {
+  background: url("../img/blue-wood-background.jpg") repeat;
+  font-family: 'Exo', sans-serif;
+  color: white;
+  -webkit-text-stroke-color: #7BAFD4;
+  -webkit-text-fill-color: white;
+  text-align: center;
+  border-radius: 3px; }
+  .jumbotron h1, footer h1 {
+    -webkit-text-stroke-width: 3px; }
+  .jumbotron h2, footer h2 {
+    -webkit-text-stroke-width: 2px; }
+
+.jumbotron {
+  border: 8px inset #C0C0C0; }
+
+footer {
+  padding: 40px;
+  border: 8px outset #C0C0C0;
+  -webkit-text-stroke-width: 1px; }
+
+#about {
+  margin-left: 5%;
+  margin-right: 5%; }
+  #about ul {
+    list-style-image: url("../img/computer.gif");
+    /*http://2css.com/graphics/computer.gif*/
+    vertical-align: bottom; }
+  #about li {
+    line-height: 100%; }
