@@ -29,13 +29,14 @@ var BlogPostWrapper = React.createClass({
       <Route path="blogpost/:id" component={BlogPostWrapper}/>
       <Route path="admin" component={Admin}/>
       <Route path="newPost" component={NewPost}/>
-            <Route path="*" status={404} component={BadLink}/>
       */
 
 module.exports = (
   <Router history={BrowserHistory}>
     <Route path="/" component={Main}>
       <IndexRoute component={Home} />
+      <Route path="portfolio" component={Portfolio}/>
+      <Route path="*" status={404} component={BadLink}/>
     </Route>
   </Router>
 );

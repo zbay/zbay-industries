@@ -1,3 +1,7 @@
+body{
+background-image: url("../img/whitecarbonfiber.jpg"); /*http://decalpitstop.com/wallpaper/1280x800/white%20carbon%20fiber.jpg */
+background-repeat: repeat;
+}
 .jumbotron, footer{
         background: url("../img/blue-wood-background.jpg") repeat;
         font-family: 'Exo', sans-serif;
@@ -20,6 +24,7 @@ footer{
     padding:40px;
     border: 8px outset #C0C0C0;
    -webkit-text-stroke-width: 1px;
+   font-size:150%;
 }
 #about{
     margin-left:5%;
@@ -31,4 +36,32 @@ footer{
     li{
         line-height:100%;
     }
+}
+.navCol{
+    display:inline-block;
+    border-top: 4px solid #FFCD8D;
+    border-bottom: 4px solid #FFCD8D;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:20px;
+    padding-right:20px;
+    font-weight:bold;
+    background-color:#D3D3D3;
+}
+.navCol:nth-child(1){
+    border-left: 4px solid #FFCD8D;
+    border-right: 2px solid #FFCD8D;;
+}
+.navCol:nth-child(2){
+    border-left: 2px solid #FFCD8D;
+    border-right: 2px solid #FFCD8D;;
+}
+.navCol:nth-child(3){
+    border-left: 2px solid #FFCD8D;
+    border-right: 4px solid #FFCD8D;;
+}
+nav{
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
 }

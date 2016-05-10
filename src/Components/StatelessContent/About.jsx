@@ -5,15 +5,17 @@ module.exports = React.createClass({
         return (
         <div id="about">
         <h3>About "Us"</h3>
-        <p>Zbay Industries is not a real company. At least, not yet. It's an ironic name for the modest and heretofore unprofitable career of Zachary Williams.</p>
+        <p>Zbay Industries is not a real company. At least, not yet. It's an ironic name for the modest and heretofore unprofitable career of 
+        Zachary Williams.</p>
         <h3>About the CEO</h3>
-        <p>I, Zachary Williams am an aspiring web developer. I graduated from UNC Chapel Hill in December with a worthless liberal arts degree. 
+        <p>I, Zachary Williams, am an aspiring web developer. I graduated from UNC Chapel Hill in December with a worthless liberal arts degree. 
         I thought I wanted to be a lawyer until about a year ago,
-        when I changed course and decided to teach myself how to program. 
-        Using free and cheap resources, including FreeCodeCamp.com, I learned a full JavaScript stack.
-        I am positive that I can help just about any company in need of a JavaScript developer.</p>
+        when I realized the error of my ways and decided to learn how to code. 
+        Using free and cheap resources, including <a href="https://www.freecodecamp.com" target="_blank">FreeCodeCamp.com</a>, I taught myself 
+        a full JavaScript stack. A committed and successful autodidact, 
+        I am now positive that I can help almost any company in need of a JavaScript developer.</p>
         <h3>What does Zbay Industries specialize in?</h3>
-        <p>I am confident in my knowledge of the following technologies:</p>
+        <p>I am confident in my knowledge of the following languages or technologies:</p>
         <ul>
         <li>HTML</li>
         <li>CSS</li>
@@ -23,7 +25,7 @@ module.exports = React.createClass({
         <li>MongoDB</li>
         </ul>
         <br />
-        I have some experience with the following technologies:
+        I have some experience with the following languages/technologies:
         <ul>
         <li>MySQL</li>
         <li>D3.js</li>
@@ -35,8 +37,8 @@ module.exports = React.createClass({
         <br />
         I intend to learn the following technologies in the future, in approximate order of priority:
         <ul>
-        <li>React Native and mobile app development</li>
         <li>AngularJS 2</li>
+        <li>React Native and mobile app development</li>
         <li>PostgreSQL</li>
         <li>Ruby and Ruby on Rails</li>
         <li>Flask</li>

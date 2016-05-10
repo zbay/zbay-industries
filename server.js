@@ -25,7 +25,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-Routes(app);
+
+app.get('*', function(req, res) {
+  res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+});
+
+//Routes(app);
 
 console.log("Listening on Port 8080");
 var server = app.listen(process.env.PORT || 8080);
