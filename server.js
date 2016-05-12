@@ -1,25 +1,26 @@
+//https://www.npmjs.com/package/mysql
 var http = require('http');
+var mysql = require('mysql');
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
 var app = express();
 var api = require('./controllers');
-var mongoose = require('mongoose');
-var db = mongoose.connection;
-var Router = require('react-router');
 var React = require('react');
-var Routes = require('./controllers');
-var mongo = require('mongodb');
+var dotenv = require('dotenv').load();
 
-//var dotenv = require('dotenv').load();
-
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost:27017/zbay-industries', function (err, db)
-{
- if (err) {
-      throw new Error('Database failed to connect!');
-   } else {
-      console.log('Successfully connected to MongoDB.');
-
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : process.env.DB_USER,
+  password : process.env.DB_PASSWORD,
+  database : process.env.DB_NAME
+});
+connection.connect(function(err) {
+  if (err) {
+    console.error('error connecting: ' + err.stack);
+    return;
+  }
+  console.log('connected as id ' + connection.threadId);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -34,5 +35,4 @@ app.get('*', function(req, res) {
 
 console.log("Listening on Port 8080");
 var server = app.listen(process.env.PORT || 8080);
-}
 });

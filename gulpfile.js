@@ -37,10 +37,10 @@ gulp.src('src/scss/*.scss')
     console.log(stdout);
     console.log(stderr);
   });*/
-  exec('mongod --smallfiles', function (err, stdout, stderr) {
+  /*exec('mongod --smallfiles', function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
-  });
+  });*/
   }
   
   build();

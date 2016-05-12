@@ -65,3 +65,58 @@ nav{
     margin-right:auto;
     text-align:center;
 }
+#portfolio{
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    img{
+        border: 8px inset #C0C0C0;
+    }
+    .row{
+        margin-left:auto;
+        margin-right:auto;
+        margin-bottom:1%;
+        text-align:center;
+    }
+    .caption{
+        margin-top:1%;
+    }
+}
+#portfolio{
+    h3, h4{
+    font-family: 'Exo', sans-serif;
+    font-size:200%;
+    /*
+    background: url("../img/blue-wood-background.jpg") repeat;
+    color:white;
+    padding-top:20px;
+    padding-bottom:20px;
+    max-width:30%;
+    margin-left: auto;
+    margin-right:auto;
+    border-radius:15px;
+    -webkit-text-stroke-color: #7BAFD4;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 2px;  */
+    }
+}
+#about{
+    h3, h4{
+    font-family: 'Exo', sans-serif;
+    /*background: url("../img/blue-wood-background.jpg") repeat;
+    color:white;
+    font-size:200%;
+    padding-top:20px;
+    padding-bottom:20px;
+    text-align:center;
+    max-width:20%;
+    border-radius:15px;
+    -webkit-text-stroke-color: #7BAFD4;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 2px;  */
+    }
+}
+nav a{
+     font-family: 'Exo', sans-serif;
+     font-size:120%;
+}

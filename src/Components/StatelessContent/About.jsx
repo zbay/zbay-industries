@@ -14,20 +14,20 @@ module.exports = React.createClass({
         Using free and cheap resources, including <a href="https://www.freecodecamp.com" target="_blank">FreeCodeCamp.com</a>, I taught myself 
         a full JavaScript stack. A committed and successful autodidact, 
         I am now positive that I can help almost any company in need of a JavaScript developer.</p>
-        <h3>What does Zbay Industries specialize in?</h3>
-        <p>I am confident in my knowledge of the following languages or technologies:</p>
+        <h3>Specialties</h3>
+        <p>I am confident in the following languages or technologies:</p>
         <ul>
         <li>HTML</li>
         <li>CSS</li>
         <li>Client-side JavaScript, including the jQuery library</li>
         <li>Server-side JavaScript, with Node and Express</li>
-        <li>React.js and related tools (React Router, ES5 transpilers, bundlers, the Flux pattern and Redux in particular</li>
+        <li>React.js and related tools (React Router, ES5 transpilers, bundlers, the Flux pattern and Redux in particular)</li>
         <li>MongoDB</li>
         </ul>
         <br />
         I have some experience with the following languages/technologies:
         <ul>
-        <li>MySQL</li>
+        <li>MySQL and PostgreSQL</li>
         <li>D3.js</li>
         <li>AngularJS 1</li>
         <li>Java</li>
@@ -38,8 +38,8 @@ module.exports = React.createClass({
         I intend to learn the following technologies in the future, in approximate order of priority:
         <ul>
         <li>AngularJS 2</li>
+        <li>Java (in greater depth) and Spark</li>
         <li>React Native and mobile app development</li>
-        <li>PostgreSQL</li>
         <li>Ruby and Ruby on Rails</li>
         <li>Flask</li>
         </ul>
