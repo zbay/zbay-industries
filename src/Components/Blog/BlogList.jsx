@@ -1,24 +1,30 @@
 var React = require('react');
 var axios = require('axios');
 var BlogPost = require('./BlogPost');
+var PageBar = require('../Navigation/PageBar');
+var perPage = 3;
 
 module.exports = React.createClass({
     getInitialState: function(){
       return {"posts": []};  
     },
     componentDidMount: function(){
-      this.getPosts();  
+      this.getPosts(this.props.page);  
+    },
+    componentWillReceiveProps: function(nextProps){
+       this.getPosts(nextProps.page);  
     },
     render: function(){
         return (<div id="blogList">
         <h3>Blog Posts</h3>
         <br />
         {this.renderPosts()}
+        <PageBar page={this.props.page} hasNext={this.state.posts.length == perPage}/>
         </div>);
     },
-    getPosts: function(){
+    getPosts: function(page){
      let that = this;
-     axios.post("/getPosts", {"page": parseInt(that.props.page)})
+     axios.post("/getPosts", {"page": parseInt(page)})
      .then(function(response){
          console.log(response.data.error);
          console.log(response.data.posts);

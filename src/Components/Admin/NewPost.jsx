@@ -8,6 +8,7 @@ module.exports = React.createClass({
     },
     render: function(){
         return (<div id="newPost">
+        <br />
         <FormAlert successMessage={this.state.successMessage} errorMessage={this.state.errorMessage}/>
         <h3>New Blog Post:</h3>
         <label>Username: </label>
@@ -37,8 +38,8 @@ module.exports = React.createClass({
             <option value="Miscellaneous">Miscellaneous Rants</option>
          </select>
         <br /><br />
-        <br /><br />
         <button onClick={this.submitPost}>Post</button>
+        <br /><br />
         </div>);
     },
     onChange: function(e){
@@ -55,7 +56,7 @@ module.exports = React.createClass({
         })
         .then(function(response){
             if(response.data.success){
-                that.setState({"successMessage": response.data.success, "errorMessage": null, "username": "", "password": "",
+                that.setState({"successMessage": response.data.success, "errorMessage": null,
                     "title": "", "content": "", "category": ""
                 });
             }

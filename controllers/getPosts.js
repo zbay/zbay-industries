@@ -1,6 +1,6 @@
 var mysql = require('mysql');
 var dotenv = require('dotenv').load();
-var perPage = 10;
+var perPage = 3;
 
 module.exports = function(app) {
 app.post("/getPosts", function(req, res){
