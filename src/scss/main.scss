@@ -1,3 +1,5 @@
+$nav_border: #FFCD8D;
+$silver: #C0C0C0;
 body{
 background-image: url("../img/whitecarbonfiber.jpg"); /*http://decalpitstop.com/wallpaper/1280x800/white%20carbon%20fiber.jpg */
 background-repeat: repeat;
@@ -18,11 +20,11 @@ background-repeat: repeat;
         border-radius:3px;
 }
 .jumbotron{
-           border: 8px inset #C0C0C0; 
+           border: 8px inset $silver; 
 }
 footer{
     padding:40px;
-    border: 8px outset #C0C0C0;
+    border: 8px outset $silver;
    -webkit-text-stroke-width: 1px;
    font-size:150%;
 }
@@ -39,8 +41,8 @@ footer{
 }
 .navCol{
     display:inline-block;
-    border-top: 4px solid #FFCD8D;
-    border-bottom: 4px solid #FFCD8D;
+    border-top: 4px solid $nav_border;
+    border-bottom: 4px solid $nav_border;
     padding-top:5px;
     padding-bottom:5px;
     padding-left:20px;
@@ -49,18 +51,18 @@ footer{
     background-color:#D3D3D3;
 }
 .navCol:nth-child(1){
-    border-left: 4px solid #FFCD8D;
-    border-right: 2px solid #FFCD8D;;
+    border-left: 4px solid $nav_border;
+    border-right: 2px solid $nav_border;;
 }
 .navCol:nth-child(2){
-    border-left: 2px solid #FFCD8D;
-    border-right: 2px solid #FFCD8D;;
+    border-left: 2px solid $nav_border;
+    border-right: 2px solid $nav_border;;
 }
 .navCol:nth-child(3){
-    border-left: 2px solid #FFCD8D;
-    border-right: 4px solid #FFCD8D;;
+    border-left: 2px solid $nav_border;
+    border-right: 4px solid $nav_border;;
 }
-nav{
+nav, #newPost{
     margin-left:auto;
     margin-right:auto;
     text-align:center;
@@ -70,7 +72,7 @@ nav{
     margin-right:auto;
     text-align:center;
     img{
-        border: 8px inset #C0C0C0;
+        border: 8px inset $silver;
     }
     .row{
         margin-left:auto;
@@ -82,7 +84,7 @@ nav{
         margin-top:1%;
     }
 }
-#portfolio{
+#portfolio, #blogList{
     h3, h4{
     font-family: 'Exo', sans-serif;
     font-size:200%;
@@ -103,20 +105,31 @@ nav{
 #about{
     h3, h4{
     font-family: 'Exo', sans-serif;
-    /*background: url("../img/blue-wood-background.jpg") repeat;
-    color:white;
-    font-size:200%;
-    padding-top:20px;
-    padding-bottom:20px;
-    text-align:center;
-    max-width:20%;
-    border-radius:15px;
-    -webkit-text-stroke-color: #7BAFD4;
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke-width: 2px;  */
     }
+}
+#blogList{
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+.blogPost{
+    margin-left:5%;
+    margin-right:5%;
+    padding-left:5%;
+    padding-right:5%;
+    text-align:left;
+    border: 1px solid $silver;
+}
+#blogList, .blogPost{
+    margin-bottom:10px;
 }
 nav a{
      font-family: 'Exo', sans-serif;
      font-size:120%;
+}
+textarea{
+    min-width:70%;
+}
+.postTime{
+    font-style:italic;
 }
