@@ -5,12 +5,15 @@ var Link = require('react-router').Link;
 
 module.exports = React.createClass({
     render: function(){
-        console.log("timePosted: " + this.props.postData.timePosted);
         var postTime = moment(this.props.postData.timePosted).format('MMMM Do YYYY, h:mm a');
         return (<div className="blogPost">
         <Link to={"/blogpost/" + this.props.postData.postNum}><h4 className="postTitle">{this.props.postData.title || ""}</h4></Link>
         <div className="postTime">{postTime || ""}</div>
-        <div className="postContent" dangerouslySetInnerHTML={this.rawMarkup(this.props.postData.summaryContent)}></div>
+        <br />
+        <div className="postContent" dangerouslySetInnerHTML={this.rawMarkup(this.props.postData.fullContent)}></div>
+        <br />
+        <div className="postCategory">Filed Under: {this.props.postData.category} Rants</div>
+        <br />
         </div>);
     },
     rawMarkup: function(value) {

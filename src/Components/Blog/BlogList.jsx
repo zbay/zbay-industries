@@ -16,7 +16,7 @@ module.exports = React.createClass({
     },
     render: function(){
         return (<div id="blogList">
-        <h3>Blog Posts</h3>
+        <h3 id="listHeader">Blog Posts</h3>
         <br />
         {this.renderPosts()}
         <PageBar page={this.props.page} hasNext={this.state.posts.length == perPage}/>

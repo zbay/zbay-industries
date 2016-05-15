@@ -13,6 +13,7 @@ var connection = mysql.createConnection({
 
 connection.connect(function(err) {
   if (err) {
+      console.log(err);
     res.json({"error": "Failed to connect to the database!"});
     connection.end();
   }
@@ -54,6 +55,35 @@ connection.connect(function(err) {
          } 
          else{
              res.json({"postData": row});
+             connection.end();
+         }
+      });
+  }
+
+}); 
+});
+
+app.post("/getComments", function(req, res){
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : process.env.DB_USER,
+  password : process.env.DB_PASSWORD,
+  database : process.env.DB_NAME
+});
+
+connection.connect(function(err) {
+  if (err) {
+    res.json({"error": "Failed to connect to the database!"});
+    connection.end();
+  }
+  else{
+      connection.query("SELECT * FROM comments WHERE postnum = " + req.body.postNum + " ORDER BY timePosted ASC;", function(error, rows){
+         if(error){
+            res.json({"error": "Failed to load comments from the database. Try reloading the page. If that fails, the post was likely deleted."});
+            connection.end();
+         } 
+         else{
+             res.json({"comments": rows || []});
              connection.end();
          }
       });

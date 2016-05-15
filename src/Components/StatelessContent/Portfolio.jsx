@@ -3,10 +3,10 @@ var PortfolioItem = require("./PortfolioItem");
 
 module.exports = React.createClass({
     render: function(){
-        //football image: https://openclipart.org/image/2400px/svg_to_png/102853/1293842064.png
+        //football clipart for CoachRank: https://openclipart.org/image/2400px/svg_to_png/102853/1293842064.png
         return (<div id="portfolio" className="container">
         <br />
-        <h3>Products</h3>
+        <h3 id="portfolioHeader">Products</h3>
         <br/>
         <div className="row">
             <div className="col-sm-4">

@@ -3,20 +3,29 @@ var axios = require('axios');
 var moment = require('moment');
 var marked = require('marked');
 var FormAlert = require("../Alerts/FormAlert");
+var CommentForm = require("../Comments/CommentForm");
+var CommentList = require("../Comments/CommentList");
 
 module.exports = React.createClass({
     getInitialState: function(){
-      return {"postData": null, "errorMessage": null};  
+      return {"postData": null, "errorMessage": null, "comments": [], "commentError": null};  
     },
     componentDidMount: function(){
-      this.getPost();  
+      this.getPost();
+      this.getComments();
     },
     render: function(){
         return (<div>
         <FormAlert errorMessage={this.state.errorMessage}/>
-        {this.state.postData ? (<div className="blogPost"><h3 className="postTitle">{this.state.postData.title || ""}</h3>
+        {this.state.postData ? (<div className="blogPost"><h3 className="postTitleAlone">{this.state.postData.title || ""}</h3>
         <div className="postTime">{moment(this.state.postData.timePosted).format('MMMM Do YYYY, h:mm a')}</div>
-        <div className="postContent" dangerouslySetInnerHTML={this.rawMarkup(this.state.postData.fullContent)}></div></div>): (<span></span>)}
+        <div className="postContent" dangerouslySetInnerHTML={this.rawMarkup(this.state.postData.fullContent)}></div>
+        <div className="postCategory">Filed Under: {this.state.postData.category} Rants</div>
+        <br />
+        </div>): (<span></span>)}
+        <CommentList comments={this.state.comments}/>
+        <CommentForm postNum={this.props.id} postComment={this.postComment} commentError={this.state.commentError}/>
+        <br />
         </div>);
     },
     getPost: function(){
@@ -27,10 +36,37 @@ module.exports = React.createClass({
              that.setState({"errorMessage": response.data.error});
          }
          else{
-             console.log("postData: " + JSON.stringify(response.data.postData));
              that.setState({"postData": response.data.postData[0]});
          }
      });   
+    },
+    getComments: function(){
+      let that = this;
+      axios.post("/getComments", {postNum: that.props.id})
+      .then(function(response){
+         if(response.data.error){
+             that.setState({"errorMessage": response.data.error});
+         }
+         else{
+             that.setState({"comments": response.data.comments});
+         }
+      });
+    },
+    postComment: function(commentData){
+        let that = this;
+      axios.post("/addComment", {commentData: commentData})
+      .then(function(response){
+          if(response.data.error){
+              that.setState({"commentError": response.data.error});
+          }
+          else{
+              commentData.timePosted = new Date().toISOString().slice(0, 19).replace('T', ' ');
+              var newComments = that.state.comments;
+              newComments.push(commentData);
+              console.log("newComments: " + newComments);
+              that.setState({"comments": newComments});
+          }
+      });  
     },
     rawMarkup: function(value) {
       var rawMarkup = marked(value, {sanitize: true});

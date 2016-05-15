@@ -88,26 +88,15 @@ nav, #newPost{
     h3, h4{
     font-family: 'Exo', sans-serif;
     font-size:200%;
-    /*
-    background: url("../img/blue-wood-background.jpg") repeat;
-    color:white;
-    padding-top:20px;
-    padding-bottom:20px;
-    max-width:30%;
-    margin-left: auto;
-    margin-right:auto;
-    border-radius:15px;
-    -webkit-text-stroke-color: #7BAFD4;
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke-width: 2px;  */
     }
 }
-#about{
+#about, #commentForm{
     h3, h4{
+    color: navy;
     font-family: 'Exo', sans-serif;
     }
 }
-#blogList{
+#blogList, #commentForm{
     margin-left:auto;
     margin-right:auto;
     text-align:center;
@@ -118,7 +107,8 @@ nav, #newPost{
     padding-left:5%;
     padding-right:5%;
     text-align:left;
-    border: 1px solid $silver;
+    border: 1px solid navy;
+    background-color:#ececec;
 }
 #blogList, .blogPost{
     margin-bottom:10px;
@@ -130,6 +120,46 @@ nav a{
 textarea{
     min-width:70%;
 }
-.postTime{
+.postTime, .postCategory{
     font-style:italic;
+}
+#pageBar button{
+    color:white;
+    font-family:"Exo", sans-serif;
+    background-color:navy;
+    border:2px solid $silver;
+    border-radius:5px;
+}
+#listHeader, .postTitleAlone, #portfolioHeader{
+    color: navy;
+    font-family: 'Exo', sans-serif;
+}
+.comment{
+    margin-left:5%;
+    margin-right:5%;
+    padding-left:5%;
+    padding-right:5%;
+    padding-top:3px;
+    margin-top:3px;
+    margin-bottom:3px;
+    border: 1px solid $nav_border;
+    background-color:#ececec;
+}
+.commentContent{
+    padding-left:5%;
+    padding-right:5%;
+}
+.commentMeta{
+    background-color:navy;
+    padding-left:5%;
+    padding-right:5%;
+    padding-top:3px;
+    padding-bottom:3px;
+    color:white;
+    border-radius:5px;
+}
+#listHeader{
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
 }
