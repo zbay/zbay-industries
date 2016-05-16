@@ -7,10 +7,10 @@ module.exports = React.createClass({
     render: function(){
         var postTime = moment(this.props.postData.timePosted).format('MMMM Do YYYY, h:mm a');
         return (<div className="blogPost">
-        <Link to={"/blogpost/" + this.props.postData.postNum}><h4 className="postTitle">{this.props.postData.title || ""}</h4></Link>
+        <Link to={"/blog/post/" + this.props.postData.postNum}><h4 className="postTitle">{this.props.postData.title || ""}</h4></Link>
         <div className="postTime">{postTime || ""}</div>
         <br />
-        <div className="postContent" dangerouslySetInnerHTML={this.rawMarkup(this.props.postData.fullContent)}></div>
+        <div className="postContent" dangerouslySetInnerHTML={this.rawMarkup(this.props.postData.content)}></div>
         <br />
         <div className="postCategory">Filed Under: {this.props.postData.category} Rants</div>
         <br />

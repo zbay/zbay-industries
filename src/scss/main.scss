@@ -158,8 +158,13 @@ textarea{
     color:white;
     border-radius:5px;
 }
-#listHeader{
+#listHeader, #noComments, #blogNav, #fourohfour{
     text-align:center;
     margin-left:auto;
     margin-right:auto;
+}
+#fourohfour{
+    font-family: "Exo", sans-serif;
+    font-size:200%;
+    color:navy;
 }

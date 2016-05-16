@@ -6,13 +6,14 @@ var perPage = 3;
 
 module.exports = React.createClass({
     getInitialState: function(){
-      return {"posts": []};  
+      return {"posts": [], "isLoading": true};  
     },
     componentDidMount: function(){
-      this.getPosts(this.props.page);  
+      let that = this;
+      that.getPosts(that.props.page, that.props.category, that.props.query);  
     },
     componentWillReceiveProps: function(nextProps){
-       this.getPosts(nextProps.page);  
+       this.getPosts(nextProps.page, nextProps.category, nextProps.query);  
     },
     render: function(){
         return (<div id="blogList">
@@ -22,24 +23,23 @@ module.exports = React.createClass({
         <PageBar page={this.props.page} hasNext={this.state.posts.length == perPage}/>
         </div>);
     },
-    getPosts: function(page){
+    getPosts: function(page, category, search){
      let that = this;
-     axios.post("/getPosts", {"page": parseInt(page)})
+     console.log("category: " + category);
+     axios.post("/getPosts", {"page": parseInt(page), "category": category, "search": search})
      .then(function(response){
-         console.log(response.data.error);
-         console.log(response.data.posts);
          if(response.data.error){
              that.setState({"errorMessage": response.data.error});
          }
          else{
-             that.setState({"posts": response.data.posts});
+             that.setState({"posts": response.data.posts, "isLoading": false});
          }
      });         
     },
     renderPosts: function(){
         let that = this;
         if(that.state.posts && that.state.posts.length <= 0){
-            return (<span></span>);
+            return (<img src="./img/loading_spinner.gif"/>);
         }
         else{
           return (that.state.posts.map(function(post, index){

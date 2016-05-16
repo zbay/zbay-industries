@@ -2,10 +2,11 @@ CREATE TABLE blogposts
     (
     postNum INT NOT NULL AUTO_INCREMENT,
     title VARCHAR(200) NOT NULL,
-    fullContent MEDIUMTEXT NOT NULL,
+    content MEDIUMTEXT NOT NULL,
     timePosted DATETIME NOT NULL,
     category VARCHAR(50) NOT NULL,
-    PRIMARY KEY (postNum)
+    PRIMARY KEY (postNum),
+    FULLTEXT search (title, content)
     );
 
 CREATE TABLE comments

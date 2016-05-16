@@ -11,7 +11,7 @@ module.exports = React.createClass({
     renderComments: function(){
         let that = this;
         if(that.props.comments && that.props.comments.length <= 0){
-            return (<div>There are no comments on this post yet. </div>);
+            return (<div id="noComments">There are no comments on this post yet.</div>);
         }
         else{
           return (that.props.comments.map(function(comment, index){

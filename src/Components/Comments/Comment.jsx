@@ -17,6 +17,7 @@ module.exports = React.createClass({
         <br />
         <div className="commentContent" dangerouslySetInnerHTML={this.rawMarkup(this.props.commentData.content)}>
         </div>
+        <br />
         </div>);
     },
     rawMarkup: function(value) {

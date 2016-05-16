@@ -4,6 +4,8 @@ var perPage = 3;
 
 module.exports = function(app) {
 app.post("/getPosts", function(req, res){
+    console.log("query: " + req.body.search);
+    console.log("category: " + req.body.category);
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : process.env.DB_USER,
@@ -18,6 +20,40 @@ connection.connect(function(err) {
     connection.end();
   }
   else{
+      if(req.body.search){
+          console.log("search!");
+      connection.query
+      ("SELECT * FROM blogposts WHERE MATCH(title, content) AGAINST('" + req.body.search +  
+      "') ORDER BY timePosted DESC LIMIT " 
+        + perPage + " OFFSET " 
+        + perPage * (req.body.page-1), function(error, rows){
+            console.log("error: " + error);
+            console.log("rows: " + rows);
+         if(error){
+            res.json({"error": "Failed to load posts from the database. Try reloading the page. If that fails, contact Zach Williams."});
+            connection.end();
+         } 
+         else{
+             res.json({"posts": rows});
+             connection.end();
+         }
+      });   
+      }
+      else if(req.body.category){
+      connection.query("SELECT * FROM blogposts WHERE category = '" + req.body.category + "' ORDER BY timePosted DESC LIMIT " 
+        + perPage + " OFFSET " 
+        + perPage * (req.body.page-1), function(error, rows){
+         if(error){
+            res.json({"error": "Failed to load posts from the database. Try reloading the page. If that fails, contact Zach Williams."});
+            connection.end();
+         } 
+         else{
+             res.json({"posts": rows});
+             connection.end();
+         }
+      });             
+      }
+      else{
       connection.query("SELECT * FROM blogposts ORDER BY timePosted DESC LIMIT " 
         + perPage + " OFFSET " 
         + perPage * (req.body.page-1), function(error, rows){
@@ -29,7 +65,8 @@ connection.connect(function(err) {
              res.json({"posts": rows});
              connection.end();
          }
-      });
+      });   
+      }
   }
 
 }); 

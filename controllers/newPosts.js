@@ -17,7 +17,7 @@ module.exports = function(app) {
       console.log(new Date());
       console.log(new Date().toISOString().slice(0, 19).replace('T', ' '));
       
-    connection.query('INSERT INTO blogposts (title, fullContent, category, timePosted) VALUES ("' 
+    connection.query('INSERT INTO blogposts (title, content, category, timePosted) VALUES ("' 
         + req.body.title + '", "' 
         + req.body.content + '", "'
         + req.body.category + '", ' 

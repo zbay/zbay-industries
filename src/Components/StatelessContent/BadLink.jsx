@@ -4,7 +4,9 @@ module.exports = React.createClass({
     render: function(){
         return (
         <div id="fourohfour">
+        <br />
         Error 404: File not found!
-        <br/></div>);
+        <br/><br />
+        </div>);
     }
 });

@@ -36,9 +36,9 @@ module.exports = React.createClass({
         </div>);
     },
     prevPage: function(){
-        BrowserHistory.push("/blog/" + (parseInt(this.props.page)-1));
+        BrowserHistory.push("/blog/posts/" + (parseInt(this.props.page)-1));
     },
     nextPage: function(){
-        BrowserHistory.push("/blog/" + (parseInt(this.props.page)+1));
+        BrowserHistory.push("/blog/posts/" + (parseInt(this.props.page)+1));
     }
     });
