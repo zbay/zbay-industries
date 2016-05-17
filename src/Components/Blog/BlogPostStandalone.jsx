@@ -60,7 +60,7 @@ module.exports = React.createClass({
               that.setState({"commentError": response.data.error});
           }
           else{
-              commentData.timePosted = new Date().toISOString().slice(0, 19).replace('T', ' ');
+              commentData.timePosted = response.data.timePosted;
               var newComments = that.state.comments;
               newComments.push(commentData);
               console.log("newComments: " + newComments);

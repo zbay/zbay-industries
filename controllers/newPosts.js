@@ -21,7 +21,7 @@ module.exports = function(app) {
         + req.body.title + '", "' 
         + req.body.content + '", "'
         + req.body.category + '", ' 
-        + '"' + new Date().toISOString().slice(0, 19).replace('T', ' ') + '");'
+        + new Date().toISOString().slice(0, 19).replace('T', ' ') + '");'
     , function(error, rows) {
         if(error){
             console.log(error);
@@ -50,7 +50,6 @@ var connection = mysql.createConnection({
     return;
   }
   else{
-      console.log(JSON.stringify(req.body.commentData));
       connection.query('INSERT INTO comments (postNum, author, content, timePosted) VALUES ("'
         + req.body.commentData.postNum + '", "' 
         + req.body.commentData.author + '", "' 
@@ -63,8 +62,10 @@ var connection = mysql.createConnection({
             connection.end();
         }        
         else{
-            res.json({"success": "Comment successfully saved!"});
-            connection.end();
+            connection.query('SELECT timePosted FROM comments ORDER BY timePosted DESC LIMIT 1', function(err, data){
+                res.json({"timePosted":  data[0].timePosted});
+                connection.end(); 
+            });
         }
       }
       );

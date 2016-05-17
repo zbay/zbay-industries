@@ -21,14 +21,11 @@ connection.connect(function(err) {
   }
   else{
       if(req.body.search){
-          console.log("search!");
       connection.query
       ("SELECT * FROM blogposts WHERE MATCH(title, content) AGAINST('" + req.body.search +  
       "') ORDER BY timePosted DESC LIMIT " 
         + perPage + " OFFSET " 
         + perPage * (req.body.page-1), function(error, rows){
-            console.log("error: " + error);
-            console.log("rows: " + rows);
          if(error){
             res.json({"error": "Failed to load posts from the database. Try reloading the page. If that fails, contact Zach Williams."});
             connection.end();

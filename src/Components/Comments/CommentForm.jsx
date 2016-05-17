@@ -2,17 +2,16 @@ var React = require('react');
 var FormAlert = require('../Alerts/FormAlert');
 module.exports = React.createClass({
     getInitialState: function(){
-        return {"content": "", "author": "", "commentError": null};
+        return {"content": "", "author": ""};
     },
     render: function(){
         return (<div id="commentForm">
         <h3>Write a Comment</h3>
-        <FormAlert errorMessage={this.state.commentError}/>
         <label>Author:</label>
         <br />
         <input name="author" value={this.state.author} onChange={this.onChange}/>
         <br /><br />
-        <label>Comment Text (note that you can use the <a href="http://assemble.io/docs/Cheatsheet-Markdown.html" target="_blank">Markdown language</a>
+        <label>Comment text (note that you can use the <a href="http://assemble.io/docs/Cheatsheet-Markdown.html" target="_blank">Markdown language</a>
         &nbsp;for styling):</label>
         <br />
         <textarea name="content" value={this.state.content} onChange={this.onChange}/>
