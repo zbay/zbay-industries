@@ -8,7 +8,6 @@ module.exports = React.createClass({
     },
     render: function(){
         return (<div id="newPost">
-        <br />
         <FormAlert successMessage={this.state.successMessage} errorMessage={this.state.errorMessage}/>
         <h3>New Blog Post:</h3>
         <label>Username: </label>

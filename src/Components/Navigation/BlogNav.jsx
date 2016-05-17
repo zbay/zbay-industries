@@ -19,8 +19,8 @@ module.exports = React.createClass({
         </select>
         &nbsp;&nbsp;&nbsp;
         &nbsp;
-        <input name="search" placeholder="Search" value={this.state.search} onChange={this.onSearchChange}/>
-        <button onClick={this.onSearchSubmit}>Go</button>
+        <input name="search" placeholder="Search all posts" value={this.state.search} onChange={this.onSearchChange}/>
+        <button id="blogNavButton" onClick={this.onSearchSubmit}>Go</button>
         </div>);
 },
 onCategoryChange: function(e){

@@ -96,7 +96,7 @@ nav, #newPost{
     font-family: 'Exo', sans-serif;
     }
 }
-#blogList, #commentForm{
+#blogList, #commentForm, #formAlert{
     margin-left:auto;
     margin-right:auto;
     text-align:center;
@@ -147,6 +147,13 @@ button{
     margin-bottom:3px;
     border: 1px solid $nav_border;
     background-color:#ececec;
+    img{
+        max-width:99%;
+    }
+    td, th{
+        border: 1px solid black;
+        padding:2px;
+    }
 }
 .commentContent{
     padding-left:5%;
@@ -161,7 +168,7 @@ button{
     color:white;
     border-radius:5px;
 }
-#listHeader, #noComments, #blogNav, #fourohfour{
+#listHeader, #noComments, #blogNav, #fourohfour, #markdownNotice{
     text-align:center;
     margin-left:auto;
     margin-right:auto;
@@ -174,4 +181,7 @@ button{
 select{
     color:white;
     background-color:navy;
+}
+#blogNavButton{
+    vertical-align:top;
 }

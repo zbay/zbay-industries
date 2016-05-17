@@ -19,10 +19,10 @@ module.exports = function(app) {
       
       var title = connection.escape(req.body.title);
       
-    connection.query('INSERT INTO blogposts (title, content, category, timePosted) VALUES ("' 
-        + connection.escape(req.body.title) + '", "' 
-        + connection.escape(req.body.content) + '", "'
-        + connection.escape(req.body.category) + '", ' 
+    connection.query('INSERT INTO blogposts (title, content, category, timePosted) VALUES (' 
+        + connection.escape(req.body.title) + ', ' 
+        + connection.escape(req.body.content) + ', '
+        + connection.escape(req.body.category) + ', "' 
         + new Date().toISOString().slice(0, 19).replace('T', ' ') + '");'
     , function(error, rows) {
         if(error){
@@ -52,10 +52,10 @@ var connection = mysql.createConnection({
     return;
   }
   else{
-      connection.query('INSERT INTO comments (postNum, author, content, timePosted) VALUES ("'
-        + connection.escape(req.body.commentData.postNum) + '", "' 
-        + connection.escape(req.body.commentData.author) + '", "' 
-        + connection.escape(req.body.commentData.content) + '", "'
+      connection.query('INSERT INTO comments (postNum, author, content, timePosted) VALUES ('
+        + connection.escape(req.body.commentData.postNum) + ', ' 
+        + connection.escape(req.body.commentData.author) + ', ' 
+        + connection.escape(req.body.commentData.content) + ', "'
         + new Date().toISOString().slice(0, 19).replace('T', ' ') + '");'
       , function(error, rows){
         if(error){

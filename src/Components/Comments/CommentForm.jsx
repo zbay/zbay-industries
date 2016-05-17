@@ -11,11 +11,12 @@ module.exports = React.createClass({
         <br />
         <input name="author" value={this.state.author} onChange={this.onChange}/>
         <br /><br />
-        <label>Comment text (note that you can use the <a href="http://assemble.io/docs/Cheatsheet-Markdown.html" target="_blank">Markdown language</a>
-        &nbsp;for styling):</label>
+        <label>Comment text:</label>
         <br />
         <textarea name="content" value={this.state.content} onChange={this.onChange}/>
-        <br /><br />
+        <div id="markdownNotice">Note that you can use the <a href="http://assemble.io/docs/Cheatsheet-Markdown.html" target="_blank">Markdown language</a>
+        &nbsp;for styling.</div>
+        <br />
         <button onClick={this.submitComment}>Post</button>
         <br />
         </div>);
