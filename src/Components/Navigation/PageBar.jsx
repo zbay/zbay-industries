@@ -36,9 +36,25 @@ module.exports = React.createClass({
         </div>);
     },
     prevPage: function(){
+        if(this.props.search && this.props.search.length > 0){
+         BrowserHistory.push("/blog/posts/search" + this.props.search + "/" + (parseInt(this.props.page)-1));    
+        }
+        else if(this.props.category){
+         BrowserHistory.push("/blog/posts/category/" + this.props.category + "/" + (parseInt(this.props.page)-1));   
+        }
+        else{
         BrowserHistory.push("/blog/posts/" + (parseInt(this.props.page)-1));
+        }
     },
     nextPage: function(){
+        if(this.props.search && this.props.search.length > 0){
+         BrowserHistory.push("/blog/posts/search" + this.props.search + "/" (parseInt(this.props.page)+1));    
+        }
+        else if(this.props.category){
+         BrowserHistory.push("/blog/posts/category/" + this.props.category + "/" + (parseInt(this.props.page)+1));   
+        }
+        else{
         BrowserHistory.push("/blog/posts/" + (parseInt(this.props.page)+1));
+        }
     }
     });

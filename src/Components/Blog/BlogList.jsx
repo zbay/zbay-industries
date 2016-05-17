@@ -11,6 +11,7 @@ module.exports = React.createClass({
     componentDidMount: function(){
       let that = this;
       that.getPosts(that.props.page, that.props.category, that.props.query);  
+      setTimeout(this.showError, 5000);
     },
     componentWillReceiveProps: function(nextProps){
        this.getPosts(nextProps.page, nextProps.category, nextProps.query);  
@@ -20,7 +21,7 @@ module.exports = React.createClass({
         <h3 id="listHeader">Blog Posts</h3>
         <br />
         {this.renderPosts()}
-        <PageBar page={this.props.page} hasNext={this.state.posts.length == perPage}/>
+        <PageBar page={this.props.page} hasNext={this.state.posts.length == perPage} category={this.props.category} search={this.props.search}/>
         </div>);
     },
     getPosts: function(page, category, search){
@@ -39,12 +40,20 @@ module.exports = React.createClass({
     renderPosts: function(){
         let that = this;
         if(that.state.posts && that.state.posts.length <= 0){
-            return (<img src="./img/loading_spinner.gif"/>);
+            if(!that.state.isLoading){
+                return (<div id="loadingError">We could not find any posts that fit your description! Look elsewhere or try again later.</div>);
+            }
+            else{
+            return (<img src="https://i.imgur.com/ybqOwLP.gif"/>);
+            }
         }
         else{
           return (that.state.posts.map(function(post, index){
             return (<BlogPost key={index} postData={post}/>)
         }));   
         }
+    },
+    showError: function(){
+        this.setState({"isLoading": false});
     }
 });

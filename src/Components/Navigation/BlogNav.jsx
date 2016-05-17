@@ -2,14 +2,14 @@ var React = require('react');
 var BrowserHistory = require('react-router/lib/browserHistory');
 module.exports = React.createClass({
     getInitialState: function(){
-      return {"category": "None", "search": ""};
+      return {"category": "All", "search": ""};
     },
     render: function(){
         return (<div id="blogNav">
         <label>Browse by category:</label>
         &nbsp;
         <select name="category" value={this.state.category} onChange={this.onCategoryChange}>
-            <option value="None">---</option>
+            <option value="All">All</option>
             <option value="Career">Career</option>
             <option value="Life">Life</option>
             <option value="Tech">Tech</option>
@@ -18,9 +18,8 @@ module.exports = React.createClass({
             <option value="Miscellaneous">Miscellaneous</option>
         </select>
         &nbsp;&nbsp;&nbsp;
-        <label>Search by title and contents: </label>
         &nbsp;
-        <input name="search" value={this.state.search} onChange={this.onSearchChange}/>
+        <input name="search" placeholder="Search" value={this.state.search} onChange={this.onSearchChange}/>
         <button onClick={this.onSearchSubmit}>Go</button>
         </div>);
 },
@@ -29,7 +28,12 @@ onCategoryChange: function(e){
     state["category"] =  e.target.value;
     this.setState(state);
     if(e.target.value != "None"){
-        BrowserHistory.push("/blog/posts/category/" + e.target.value + "/1");
+        if(e.target.value == "All"){
+            BrowserHistory.push("/blog/posts/1");
+        }
+        else{
+            BrowserHistory.push("/blog/posts/category/" + e.target.value + "/1");   
+        }
     }
     },
 onSearchChange: function(e){

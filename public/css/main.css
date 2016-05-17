@@ -112,11 +112,14 @@ textarea {
 .postTime, .postCategory {
   font-style: italic; }
 
-#pageBar button {
+button {
   color: white;
   font-family: "Exo", sans-serif;
   background-color: navy;
   border: 2px solid #C0C0C0;
+  height: 100%; }
+
+#pageBar button {
   border-radius: 5px; }
 
 #listHeader, .postTitleAlone, #portfolioHeader {
@@ -156,3 +159,7 @@ textarea {
   font-family: "Exo", sans-serif;
   font-size: 200%;
   color: navy; }
+
+select {
+  color: white;
+  background-color: navy; }
