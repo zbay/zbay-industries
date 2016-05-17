@@ -17,10 +17,12 @@ module.exports = function(app) {
       console.log(new Date());
       console.log(new Date().toISOString().slice(0, 19).replace('T', ' '));
       
+      var title = connection.escape(req.body.title);
+      
     connection.query('INSERT INTO blogposts (title, content, category, timePosted) VALUES ("' 
-        + req.body.title + '", "' 
-        + req.body.content + '", "'
-        + req.body.category + '", ' 
+        + connection.escape(req.body.title) + '", "' 
+        + connection.escape(req.body.content) + '", "'
+        + connection.escape(req.body.category) + '", ' 
         + new Date().toISOString().slice(0, 19).replace('T', ' ') + '");'
     , function(error, rows) {
         if(error){
@@ -51,9 +53,9 @@ var connection = mysql.createConnection({
   }
   else{
       connection.query('INSERT INTO comments (postNum, author, content, timePosted) VALUES ("'
-        + req.body.commentData.postNum + '", "' 
-        + req.body.commentData.author + '", "' 
-        + req.body.commentData.content + '", "'
+        + connection.escape(req.body.commentData.postNum) + '", "' 
+        + connection.escape(req.body.commentData.author) + '", "' 
+        + connection.escape(req.body.commentData.content) + '", "'
         + new Date().toISOString().slice(0, 19).replace('T', ' ') + '");'
       , function(error, rows){
         if(error){
