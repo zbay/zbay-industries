@@ -1,4 +1,5 @@
 var React = require('react');
+var Link = require('react-router').Link;
 var d3 = require('d3');
  var margin = {
         top: 10,
@@ -7,7 +8,7 @@ var d3 = require('d3');
         left: 75
 };
 var width = (window.innerWidth - margin.right - margin.left) * 0.9;
-var height = (window.innerHeight - margin.top - margin.bottom) * 0.8;
+var height = (window.innerHeight - margin.top - margin.bottom) * 0.7;
 
 var meanURL = "../../viz_data/offensemeans.csv";
 var medianURL = "../../viz_data/offensemedians.csv";
@@ -108,7 +109,7 @@ chart.append("g")
           .duration(100)
           .style("opacity", 0.65)
           .style("left", (width*0.5) + "px")
-          .style("top", (height*0.9) + "px");
+          .style("top", (height) + "px");
           infobox.html("<br /><img class='logo' width='100' src='" + "../../img/logos/" + d["Team"] + ".png'" + "/><br /><br /><span class='name'>" + 
           (d["Coach"] != "Average" ? (d["Coach"]): ("NFL")) + ", " + (d["Coach"] != "Average" ? (d["Team"]): ("")) + " " + 
           (d["Coach"] != "Average" ? (d["Position"]) : ("average active HC or OC")) + "</span><br /><br /><span class='exactNumber'>" + 
@@ -126,7 +127,7 @@ chart.append("g")
     },
     resize: function(){
         width = (window.innerWidth - margin.right - margin.left) * 0.9;
-        height = (window.innerHeight - margin.top - margin.bottom) * 0.8;
+        height = (window.innerHeight - margin.top - margin.bottom) * 0.7;
         var chartNode = document.getElementById("chart");
         while (chartNode.firstChild) {
             chartNode.removeChild(chartNode.firstChild);
@@ -225,7 +226,10 @@ chart.append("g")
       <br />
       <div className="card">
       <br />
-      <div className="title">NFL Offensive Coach Rankings</div>
+      <div className="title"><span id="top">NFL Offensive Coach Rankings</span>
+      <br />
+      <Link to="/visualizations/nfl_coaches_defense">Switch to defense?</Link>
+      </div>
       <br />
       <label>Pick a category: </label>&nbsp;
       <select name="category" id="statSelector" value={this.state.currentCategory} onChange={this.onCategoryChange}>
@@ -291,7 +295,7 @@ chart.append("g")
     </div>
     <div id="acknowledgements">
       All data used in this visualization was derived from statistics freely available from&nbsp; 
-      <a href="http://www.pro-football-reference.com/" target="_blank">Pro Football Reference</a>.<br /><br />
+      <a href="http://www.pro-football-reference.com/" target="_blank">Pro Football Reference</a>. The derived data can be found <a href="https://github.com/zbay/zbay-industries/tree/master/public/viz_data" target="_blank">on my Github</a>.<br /><br />
       All NFL logos used in this visualization were originally downloaded from <a href="http://www.sportslogos.net/" target="_blank">SportsLogos.net</a>.<br />
       </div>
       </div>

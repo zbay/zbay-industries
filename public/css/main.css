@@ -180,12 +180,15 @@ select {
   margin-left: auto;
   margin-right: auto;
   padding-left: 2%;
-  max-width: 99%;
   background-color: #2E8B57;
   color: white; }
 
 #nflViz .title {
   text-align: center; }
+  #nflViz .title #top {
+    text-decoration: underline; }
+  #nflViz .title a {
+    color: #FFD700; }
 
 #nflViz rect {
   fill: #8B7E66;

@@ -194,12 +194,17 @@ select{
         margin-left:auto;
         margin-right:auto;
         padding-left:2%;
-        max-width:99%;
     	background-color: #2E8B57;
     	color: white;
     }
     .title{
     	text-align:center;
+    	#top{
+    	text-decoration:underline;
+    	}
+    	a{
+        color:#FFD700;
+        }
     }
     rect{
       fill: #8B7E66;
