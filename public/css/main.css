@@ -171,3 +171,58 @@ select {
 
 #blogNavButton {
   vertical-align: top; }
+
+#nflViz body {
+  background-color: #8B7E66;
+  font-family: verdana; }
+
+#nflViz .card {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2%;
+  max-width: 99%;
+  background-color: #2E8B57;
+  color: white; }
+
+#nflViz .title {
+  text-align: center; }
+
+#nflViz rect {
+  fill: #8B7E66;
+  stroke: white; }
+
+#nflViz #avgBar {
+  fill: red; }
+
+#nflViz .axis {
+  fill: white; }
+
+#nflViz .mouseover {
+  fill: #FFD700;
+  /*filter:brightness(200%);*/ }
+
+#nflViz .chart .mouseover {
+  fill: lime; }
+
+#nflViz .tooltip {
+  position: absolute;
+  background-color: black;
+  padding: 3px 5px 3px 5px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 5px; }
+
+#nflViz #infobox {
+  text-align: center; }
+
+#nflViz .logo {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 3px; }
+
+#nflViz #acknowledgements {
+  background-color: #FFD700;
+  text-align: center;
+  padding: 10px; }
+
+#nflViz #chart {
+  fill: url("./img/footballfield.png"); }

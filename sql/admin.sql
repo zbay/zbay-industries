@@ -19,5 +19,5 @@ CREATE TABLE comments
     PRIMARY KEY (commentNum)
     );
 
-GRANT SELECT, INSERT ON c9.* TO 'public'@'%';   
+GRANT SELECT, INSERT ON c9.comments TO 'public'@'%';   
 GRANT SELECT ON c9.blogposts TO 'public'@'%';

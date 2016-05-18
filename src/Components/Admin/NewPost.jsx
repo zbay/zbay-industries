@@ -29,12 +29,13 @@ module.exports = React.createClass({
         <label>Category:</label>
         <select name="category" value={this.state.category} onChange={this.onChange}>
             <option>---</option>
-            <option value="Career">Career Rants</option>
-            <option value="Life">Life Rants</option>
-            <option value="Tech">Tech Rants</option>
-            <option value="Political">Political Rants</option>
-            <option value="Culture">Pop Culture Rants</option>
-            <option value="Miscellaneous">Miscellaneous Rants</option>
+            <option value="Career">Career</option>
+            <option value="Life">Life</option>
+            <option value="Tech">Tech</option>
+            <option value="Politics">Politics</option>
+            <option value="Culture">Culture</option>
+            <option value="Sports">Sports</option>
+            <option value="Miscellaneous">Miscellaneous</option>
          </select>
         <br /><br />
         <button onClick={this.submitPost}>Post</button>

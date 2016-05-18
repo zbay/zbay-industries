@@ -13,6 +13,8 @@ var BlogPostStandalone = require("./Components/Blog/BlogPostStandalone");
 var BadLink = require("./Components/StatelessContent/BadLink");
 var NewPost = require("./Components/Admin/NewPost");
 var BlogWrapper = require("./Components/Blog/BlogWrapper");
+var NflCoachVizOffense = require("./Components/Visualizations/NflCoachVizOffense");
+var NflCoachVizDefense = require("./Components/Visualizations/NflCoachVizDefense");
 
 var BlogListWrapper = React.createClass({
     render: function(){
@@ -22,7 +24,6 @@ var BlogListWrapper = React.createClass({
 
 var BlogCategoryWrapper = React.createClass({
   render: function(){
-    console.log("rendering BCW");
     return (<BlogList page={this.props.routeParams.page || "1"} category={this.props.routeParams.category} query={null}/>);
   }
 });
@@ -54,6 +55,8 @@ module.exports = (
         <Route path="post/:id" component={BlogPostWrapper}/>
       </Route>
       <Route path="newPost" component={NewPost}/>
+      <Route path="visualizations/nfl_coaches_offense" component={NflCoachVizOffense}/>
+      <Route path="visualizations/nfl_coaches_defense" component={NflCoachVizDefense}/>
       <Route path="*" status={404} component={BadLink}/>
     </Route>
   </Router>

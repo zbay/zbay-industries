@@ -5,7 +5,9 @@ module.exports = React.createClass({
       return {"category": "All", "search": ""};
     },
     render: function(){
-        return (<div id="blogNav">
+        return (<div id="blogNav" className="container">
+        <div className="row">
+        <div className="col-sm-6">
         <label>Browse by category:</label>
         &nbsp;
         <select name="category" value={this.state.category} onChange={this.onCategoryChange}>
@@ -13,14 +15,17 @@ module.exports = React.createClass({
             <option value="Career">Career</option>
             <option value="Life">Life</option>
             <option value="Tech">Tech</option>
-            <option value="Political">Political</option>
+            <option value="Politics">Politics</option>
             <option value="Culture">Pop Culture</option>
+            <option value="Sports">Sports</option>
             <option value="Miscellaneous">Miscellaneous</option>
         </select>
-        &nbsp;&nbsp;&nbsp;
-        &nbsp;
+        </div>
+        <div className="col-sm-6">
         <input name="search" placeholder="Search all posts" value={this.state.search} onChange={this.onSearchChange}/>
         <button id="blogNavButton" onClick={this.onSearchSubmit}>Go</button>
+        </div>
+        </div>
         </div>);
 },
 onCategoryChange: function(e){

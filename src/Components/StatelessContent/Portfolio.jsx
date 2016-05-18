@@ -20,7 +20,9 @@ module.exports = React.createClass({
                  caption="May, 2016: A MERN stack app for ad-hoc chat rooms that can be password-protected and given a deadline for deletion."/>
             </div>
             <div className="col-sm-4">
-                <PortfolioItem url="" thumbnail="../img/coachrank.png"
+                <PortfolioItem url="/visualizations/nfl_coaches_offense"
+                personalSite={true}
+                thumbnail="../img/coachrank.png"
                 caption="May, 2016: A D3 visualization representing the strengths and weakness of NFL coaches, primarily for fantasy football purposes."/>
             </div>
         </div>
