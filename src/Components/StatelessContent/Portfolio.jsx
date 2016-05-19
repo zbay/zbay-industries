@@ -9,17 +9,17 @@ module.exports = React.createClass({
         <h3 id="portfolioHeader">Products</h3>
         <br/>
         <div className="row">
-            <div className="col-sm-4">
-                <PortfolioItem url="https://opine-io.herokuapp.com/" 
-                thumbnail="../img/opine.png"
-                caption="April, 2016: A MERN stack app for soliting and offering opinions on various topics"/>    
-            </div>
-            <div className="col-sm-4">
+            <div className="col-sm-4 col-md-4 col-lg-4">
                 <PortfolioItem url="https://have-a-word.herokuapp.com" 
                  thumbnail="../img/haveaword.png"
                  caption="May, 2016: A MERN stack app for ad-hoc chat rooms that can be password-protected and given a deadline for deletion."/>
             </div>
-            <div className="col-sm-4">
+            <div className="col-sm-4 col-md-4 col-lg-4">
+                <PortfolioItem url="https://opine-io.herokuapp.com/" 
+                thumbnail="../img/opine.png"
+                caption="April, 2016: A MERN stack app for soliting and offering opinions on various topics"/>    
+            </div>
+            <div className="col-sm-4 col-md-4 col-lg-4">
                 <PortfolioItem url="/visualizations/nfl_coaches_offense"
                 personalSite={true}
                 thumbnail="../img/coachrank.png"
@@ -27,7 +27,7 @@ module.exports = React.createClass({
             </div>
         </div>
         <div className="row">
-            <div className="col-sm-12">
+            <div className="col-sm-12 col-md-12 col-lg-12">
                 <PortfolioItem url="http://www.ibiblio.org/paulgreen/index.html" thumbnail="../img/paulgreen.png"
                 height="175"
                 caption="November, 2015: A static website for a Chapel Hill nonprofit. To solidify
@@ -36,7 +36,7 @@ module.exports = React.createClass({
             </div>
         </div>
         <div className="row">
-            <div className="col-sm-12">
+            <div className="col-sm-12 col-md-12 col-lg-12">
                  <PortfolioItem url="https://github.com/zbay" thumbnail="../img/zuperman.jpg"
                  caption="My Github account, where you can find the repos for these projects"/>
             </div>

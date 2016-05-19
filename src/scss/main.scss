@@ -22,6 +22,9 @@ background-repeat: repeat;
 .jumbotron{
            border: 8px inset $silver; 
 }
+#currentNav{
+    background-color:white;
+}
 footer{
     padding:40px;
     border: 8px outset $silver;
@@ -68,11 +71,18 @@ nav, #newPost{
     text-align:center;
 }
 #portfolio{
+    @media (max-width: 990px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+    }
     margin-left:auto;
     margin-right:auto;
     text-align:center;
     img{
         border: 8px inset $silver;
+        margin-left:auto;
+        margin-right:auto;
     }
     .row{
         margin-left:auto;
@@ -82,6 +92,7 @@ nav, #newPost{
     }
     .caption{
         margin-top:1%;
+        text-align:center;
     }
 }
 #portfolio, #blogList{
@@ -218,7 +229,6 @@ select{
     }
     .mouseover{
       fill:#FFD700;
-      /*filter:brightness(200%);*/
     }
     .chart .mouseover{
         fill: lime;

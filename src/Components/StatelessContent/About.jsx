@@ -17,7 +17,7 @@ module.exports = React.createClass({
         I am now positive that I can help almost any company in need of a JavaScript developer.</p>
         <p>If a career in web development doesn't work out, my long term fallback will be to pursue a career as a professional poker player.
         I am also an amateur philosopher, in the (very) early stages of writing a book about an orignal religious philosophy that I would describe 
-        with the label: "Darwinian Poststoicism".</p>
+        with the label: "Darwinian Post-Stoicism".</p>
         <h3>Specialties</h3>
         <p>I am comfortable with the following languages or technologies:</p>
         <ul>
@@ -39,15 +39,20 @@ module.exports = React.createClass({
         <li>Python</li>
         </ul>
         <br />
-        I intend to learn the following technologies in the future, in approximate order of priority:
+        I intend to learn more about the following technologies in the future, in approximate order of priority:
         <ul>
         <li>AngularJS 2</li>
         <li>React Native and mobile app development</li>
         <li>Java (in greater depth) and Spark</li>
+        <li>D3 (in greater depth) and SVG</li>
+        <li>PostgreSQL</li>
         <li>Ruby and Ruby on Rails</li>
         <li>Flask</li>
         </ul>
-        <br />
+        <h3>Contact Zachary</h3>
+        <p>If you want to say something about one of my blog posts, go comment on the post in question and I'll most likely reply.
+        If you're interested in hiring me, shoot me an email at ZLWilliams1@gmail.com.</p>
+        <br/>
         </div>
         );
     }

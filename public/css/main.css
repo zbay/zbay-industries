@@ -19,6 +19,9 @@ body {
 .jumbotron {
   border: 8px inset #C0C0C0; }
 
+#currentNav {
+  background-color: white; }
+
 footer {
   padding: 40px;
   border: 8px outset #C0C0C0;
@@ -67,15 +70,21 @@ nav, #newPost {
   margin-left: auto;
   margin-right: auto;
   text-align: center; }
+  @media (max-width: 990px) {
+    #portfolio [class*="col-"] {
+      width: 100%; } }
   #portfolio img {
-    border: 8px inset #C0C0C0; }
+    border: 8px inset #C0C0C0;
+    margin-left: auto;
+    margin-right: auto; }
   #portfolio .row {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1%;
     text-align: center; }
   #portfolio .caption {
-    margin-top: 1%; }
+    margin-top: 1%;
+    text-align: center; }
 
 #portfolio h3, #portfolio h4, #blogList h3, #blogList h4 {
   font-family: 'Exo', sans-serif;
@@ -201,8 +210,7 @@ select {
   fill: white; }
 
 #nflViz .mouseover {
-  fill: #FFD700;
-  /*filter:brightness(200%);*/ }
+  fill: #FFD700; }
 
 #nflViz .chart .mouseover {
   fill: lime; }

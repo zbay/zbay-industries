@@ -31,6 +31,7 @@ module.exports = React.createClass({
 onCategoryChange: function(e){
     var state = {};
     state["category"] =  e.target.value;
+    state["search"] = "";
     this.setState(state);
     if(e.target.value != "None"){
         if(e.target.value == "All"){
@@ -44,6 +45,7 @@ onCategoryChange: function(e){
 onSearchChange: function(e){
     var state = {};
     state["search"] =  e.target.value;
+    state["category"] =  "All";
     this.setState(state);
 },
 onSearchSubmit: function(){
