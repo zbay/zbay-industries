@@ -4,6 +4,7 @@ $goalpost_gold: #FFD700;
 $blog_gray: #ececec;
 $nav_gray: #D3D3D3;
 $verydark_gray: #262626;
+$navy: #000066;
 
 @mixin marginCentered(){
     margin-left:auto;
@@ -136,7 +137,7 @@ nav, #newPost, #blogList, #commentForm, #formAlert, #listHeader, #noComments, #b
 }
 #about, #commentForm{
     h3, h4{
-    color: navy;
+    color: $navy;
     font-family: 'Exo', sans-serif;
     }
 }
@@ -146,7 +147,7 @@ nav, #newPost, #blogList, #commentForm, #formAlert, #listHeader, #noComments, #b
     padding-left:5%;
     padding-right:5%;
     text-align:left;
-    border: 1px solid navy;
+    border: 1px solid $navy;
     background-color:$blog_gray;
 }
 #blogList, .blogPost{
@@ -165,7 +166,7 @@ textarea{
 button{
     color:white;
     font-family:"Exo", sans-serif;
-    background-color:navy;
+    background-color:$navy;
     border:2px solid $silver;
     height:100%;
 }
@@ -176,7 +177,7 @@ button{
     }
 }
 #listHeader, .postTitleAlone, #portfolioHeader{
-    color: navy;
+    color: $navy;
     font-family: 'Exo', sans-serif;
 }
 .comment{
@@ -202,7 +203,7 @@ button{
     padding-right:5%;
 }
 .commentMeta, #formSuccess, #formError{
-    background-color:navy;
+    background-color:$navy;
     padding-left:5%;
     padding-right:5%;
     padding-top:3px;
@@ -226,11 +227,11 @@ button{
 #fourohfour{
     font-family: "Exo", sans-serif;
     font-size:200%;
-    color:navy;
+    color:$navy;
 }
 select{
     color:white;
-    background-color:navy;
+    background-color:$navy;
 }
 #blogNav select{
     height:30px;

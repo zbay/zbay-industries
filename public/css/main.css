@@ -106,7 +106,7 @@ nav, #newPost, #blogList, #commentForm, #formAlert, #listHeader, #noComments, #b
   font-size: 200%; }
 
 #about h3, #about h4, #commentForm h3, #commentForm h4 {
-  color: navy;
+  color: #000066;
   font-family: 'Exo', sans-serif; }
 
 .blogPost {
@@ -115,7 +115,7 @@ nav, #newPost, #blogList, #commentForm, #formAlert, #listHeader, #noComments, #b
   padding-left: 5%;
   padding-right: 5%;
   text-align: left;
-  border: 1px solid navy;
+  border: 1px solid #000066;
   background-color: #ececec; }
 
 #blogList, .blogPost {
@@ -134,7 +134,7 @@ textarea {
 button {
   color: white;
   font-family: "Exo", sans-serif;
-  background-color: navy;
+  background-color: #000066;
   border: 2px solid #C0C0C0;
   height: 100%; }
 
@@ -144,7 +144,7 @@ button {
     border-radius: 5px; }
 
 #listHeader, .postTitleAlone, #portfolioHeader {
-  color: navy;
+  color: #000066;
   font-family: 'Exo', sans-serif; }
 
 .comment {
@@ -168,7 +168,7 @@ button {
   padding-right: 5%; }
 
 .commentMeta, #formSuccess, #formError {
-  background-color: navy;
+  background-color: #000066;
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 3px;
@@ -193,11 +193,11 @@ button {
 #fourohfour {
   font-family: "Exo", sans-serif;
   font-size: 200%;
-  color: navy; }
+  color: #000066; }
 
 select {
   color: white;
-  background-color: navy; }
+  background-color: #000066; }
 
 #blogNav select {
   height: 30px; }
