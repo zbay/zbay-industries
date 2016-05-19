@@ -1,35 +1,94 @@
 $nav_border: #FFCD8D;
 $silver: #C0C0C0;
+$goalpost_gold: #FFD700;
+$blog_gray: #ececec;
+$nav_gray: #D3D3D3;
+$verydark_gray: #262626;
+
+@mixin marginCentered(){
+    margin-left:auto;
+    margin-right:auto;
+}
+@mixin fullCentered(){
+    @include marginCentered();
+    text-align:center;
+}
+
 body{
 background-image: url("../img/whitecarbonfiber.jpg"); /*http://decalpitstop.com/wallpaper/1280x800/white%20carbon%20fiber.jpg */
 background-repeat: repeat;
 }
-.jumbotron, footer{
+.jumbotron{
         background: url("../img/blue-wood-background.jpg") repeat;
         font-family: 'Exo', sans-serif;
         color:white;
-        -webkit-text-stroke-color: #7BAFD4;
         h1{
-        -webkit-text-stroke-width: 3px;
+            text-shadow: 3px 3px 1px #7BAFD4,
+            -3px 3px 1px #7BAFD4,
+            3px -3px 1px #7BAFD4,
+            -3px -3px 1px #7BAFD4;
         }
         h2{
-        -webkit-text-stroke-width: 2px;
+             text-shadow: 2px 2px 1px #7BAFD4,
+             -2px 2px 1px #7BAFD4,
+             2px -2px 1px #7BAFD4,
+             -2px -2px 1px #7BAFD4;
         }
-        -webkit-text-fill-color: white;
         text-align:center;
         border-radius:3px;
+}
+footer{
+        font-size:200%;
+        text-align:center;
+        border-radius:3px;
+        background: url("../img/blue-wood-background.jpg") repeat;
+        font-family: 'Exo', sans-serif;
+        color:white;
+        padding:40px;
+        border: 8px outset $silver;
+       -webkit-text-stroke-width: 1px;
 }
 .jumbotron{
            border: 8px inset $silver; 
 }
+#portfolio{
+    @media (max-width: 990px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+    }
+    @include fullCentered();
+    img{
+        border: 8px inset $silver;
+        @include marginCentered();
+    }
+    .row{
+        @include fullCentered();
+        margin-bottom:1%;
+    }
+    .caption{
+        margin-top:1%;
+        text-align:center;
+    }
+}
+@-moz-document url-prefix() { /*darker inset/outset borders in Firefox, which lightens them too much*/
+    .jumbotron
+    {
+        border-bottom-color:$verydark_gray;
+        border-right-color:$verydark_gray;
+    }
+    footer{
+        border-top-color:$verydark_gray;
+        border-left-color:$verydark_gray;     
+    }
+    #portfolio img{
+        border-bottom-color:$verydark_gray;
+        border-right-color:$verydark_gray;
+    }
+}
+
 #currentNav{
     background-color:white;
-}
-footer{
-    padding:40px;
-    border: 8px outset $silver;
-   -webkit-text-stroke-width: 1px;
-   font-size:150%;
 }
 #about{
     margin-left:5%;
@@ -51,7 +110,7 @@ footer{
     padding-left:20px;
     padding-right:20px;
     font-weight:bold;
-    background-color:#D3D3D3;
+    background-color:$nav_gray;
 }
 .navCol:nth-child(1){
     border-left: 4px solid $nav_border;
@@ -65,35 +124,9 @@ footer{
     border-left: 2px solid $nav_border;
     border-right: 4px solid $nav_border;;
 }
-nav, #newPost{
-    margin-left:auto;
-    margin-right:auto;
-    text-align:center;
-}
-#portfolio{
-    @media (max-width: 990px) {
-    [class*="col-"] {
-        width: 100%;
-    }
-    }
-    margin-left:auto;
-    margin-right:auto;
-    text-align:center;
-    img{
-        border: 8px inset $silver;
-        margin-left:auto;
-        margin-right:auto;
-    }
-    .row{
-        margin-left:auto;
-        margin-right:auto;
-        margin-bottom:1%;
-        text-align:center;
-    }
-    .caption{
-        margin-top:1%;
-        text-align:center;
-    }
+
+nav, #newPost, #blogList, #commentForm, #formAlert, #listHeader, #noComments, #blogNav, #fourohfour, #markdownNotice{
+    @include fullCentered();
 }
 #portfolio, #blogList{
     h3, h4{
@@ -107,11 +140,6 @@ nav, #newPost{
     font-family: 'Exo', sans-serif;
     }
 }
-#blogList, #commentForm, #formAlert{
-    margin-left:auto;
-    margin-right:auto;
-    text-align:center;
-}
 .blogPost{
     margin-left:5%;
     margin-right:5%;
@@ -119,7 +147,7 @@ nav, #newPost{
     padding-right:5%;
     text-align:left;
     border: 1px solid navy;
-    background-color:#ececec;
+    background-color:$blog_gray;
 }
 #blogList, .blogPost{
     margin-bottom:10px;
@@ -157,7 +185,7 @@ button{
     margin-top:3px;
     margin-bottom:3px;
     border: 1px solid $nav_border;
-    background-color:#ececec;
+    background-color:$blog_gray;
     img{
         max-width:99%;
     }
@@ -181,18 +209,14 @@ button{
 }
 #formSuccess, #formError{
     max-width:75%;
-    margin-left:auto;
-    margin-right:auto;
-    text-align:center;
+    @include fullCentered();
     margin-top:10px;
     margin-bottom:10px;
 }
-#listHeader, #noComments, #blogNav, #fourohfour, #markdownNotice{
-    text-align:center;
-    margin-left:auto;
-    margin-right:auto;
-}
 #blogNav{
+    label{
+        line-height:30px;
+    }
     margin-top:10px;
     margin-bottom:10px;
 }
@@ -205,8 +229,15 @@ select{
     color:white;
     background-color:navy;
 }
+#blogNav select{
+    height:30px;
+}
 #blogNavButton{
     vertical-align:top;
+    height:30px;
+}
+#blogNavInput{
+    height:30px;
 }
 #nflViz{
         body{
@@ -214,8 +245,7 @@ select{
     	font-family: verdana;
     }
     .card{
-        margin-left:auto;
-        margin-right:auto;
+        @include marginCentered();
         padding-left:2%;
     	background-color: #2E8B57;
     	color: white;
@@ -226,7 +256,7 @@ select{
     	text-decoration:underline;
     	}
     	a{
-        color:#FFD700;
+        color:$goalpost_gold;
         }
     }
     rect{
@@ -240,7 +270,7 @@ select{
       fill:white;
     }
     .mouseover{
-      fill:#FFD700;
+      fill:$goalpost_gold;
     }
     .chart .mouseover{
         fill: lime;
@@ -256,12 +286,11 @@ select{
         text-align:center;
     }
     .logo{
-        margin-left: auto;
-        margin-right: auto;
+        @include marginCentered();
         border-radius:3px;
     }
     #acknowledgements{
-        background-color:#FFD700;
+        background-color:$goalpost_gold;
         text-align: center;
         padding: 10px;
     }

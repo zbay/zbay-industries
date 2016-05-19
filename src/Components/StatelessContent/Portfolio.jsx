@@ -17,7 +17,7 @@ module.exports = React.createClass({
             <div className="col-sm-4 col-md-4 col-lg-4">
                 <PortfolioItem url="https://opine-io.herokuapp.com/" 
                 thumbnail="../img/opine.png"
-                caption="April, 2016: A MERN stack app for soliting and offering opinions on various topics"/>    
+                caption="April, 2016: A MERN stack app for soliciting and offering opinions on various topics"/>    
             </div>
             <div className="col-sm-4 col-md-4 col-lg-4">
                 <PortfolioItem url="/visualizations/nfl_coaches_offense"

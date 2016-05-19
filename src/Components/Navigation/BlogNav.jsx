@@ -22,7 +22,7 @@ module.exports = React.createClass({
         </select>
         </div>
         <div className="col-sm-6">
-        <input name="search" placeholder="Search all posts" value={this.state.search} onChange={this.onSearchChange}/>
+        <input name="search" id="blogNavInput" placeholder="Search all posts" value={this.state.search} onChange={this.onSearchChange}/>
         <button id="blogNavButton" onClick={this.onSearchSubmit}>Go</button>
         </div>
         </div>

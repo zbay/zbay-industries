@@ -114,7 +114,7 @@ chart.append("g")
           (d["Coach"] != "Average" ? (d["Coach"]): ("NFL")) + ", " + (d["Coach"] != "Average" ? (d["Team"]): ("")) + " " + 
           (d["Coach"] != "Average" ? (d["Position"]) : ("average active HC or OC")) + "</span><br /><br /><span class='exactNumber'>" + 
           (renderPercent ? ((100 * d[category]).toFixed(2)) : (d[category]))
-          + " " + that.statUnits(category) + "</span><br /><span class='expNum'>in " + d["YrsExp"] + " " + yearWord + " of OC or HC experience</span>");
+          + " " + that.statUnits(category) + "</span><br /><span class='expNum'>in " + d["YrsExp"] + " " + yearWord + " of DC or HC experience</span>");
       })
       .on("mouseout", function() {
         var rect = d3.select(this);
