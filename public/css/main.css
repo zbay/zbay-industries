@@ -138,8 +138,10 @@ button {
   border: 2px solid #C0C0C0;
   height: 100%; }
 
-#pageBar button {
-  border-radius: 5px; }
+#pageBar {
+  max-width: 70%; }
+  #pageBar button {
+    border-radius: 5px; }
 
 #listHeader, .postTitleAlone, #portfolioHeader {
   color: navy;
