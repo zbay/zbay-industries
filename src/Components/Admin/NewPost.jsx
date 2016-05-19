@@ -66,7 +66,7 @@ module.exports = React.createClass({
         });
         }
         else{
-            that.setState({"errorMessage": "Please fill out the entire form."});
+            that.setState({"errorMessage": "Please fill out the entire form.", "successMessage": null});
         }
     }
 });

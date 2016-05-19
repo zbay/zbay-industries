@@ -41,7 +41,7 @@ module.exports = React.createClass({
         let that = this;
         if(that.state.posts && that.state.posts.length <= 0){
             if(!that.state.isLoading){
-                return (<div id="loadingError">We could not find any posts that fit your description! Look elsewhere or try again later.</div>);
+                return (<div id="formError">We could not find any posts that fit your description! Look elsewhere or try again later.</div>);
             }
             else{
             return (<img src="https://i.imgur.com/ybqOwLP.gif"/>);

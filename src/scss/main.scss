@@ -170,7 +170,7 @@ button{
     padding-left:5%;
     padding-right:5%;
 }
-.commentMeta{
+.commentMeta, #formSuccess, #formError{
     background-color:navy;
     padding-left:5%;
     padding-right:5%;
@@ -179,10 +179,22 @@ button{
     color:white;
     border-radius:5px;
 }
+#formSuccess, #formError{
+    max-width:75%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    margin-top:10px;
+    margin-bottom:10px;
+}
 #listHeader, #noComments, #blogNav, #fourohfour, #markdownNotice{
     text-align:center;
     margin-left:auto;
     margin-right:auto;
+}
+#blogNav{
+    margin-top:10px;
+    margin-bottom:10px;
 }
 #fourohfour{
     font-family: "Exo", sans-serif;
