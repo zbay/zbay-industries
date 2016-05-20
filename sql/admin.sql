@@ -19,5 +19,13 @@ CREATE TABLE comments
     PRIMARY KEY (commentNum)
     );
 
+CREATE TABLE users
+    (
+    username VARCHAR(30) NOT NULL,
+    password CHAR(40) NOT NULL
+    );
+
 GRANT SELECT, INSERT ON c9.comments TO 'public'@'%';   
 GRANT SELECT ON c9.blogposts TO 'public'@'%';
+
+/* mysql -u username -h my.application.com -ppassword */

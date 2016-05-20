@@ -37,10 +37,10 @@ gulp.src('src/scss/*.scss')
     console.log(stdout);
     console.log(stderr);
   });*/
-  exec('mysql-ctl start', function (err, stdout, stderr) {
+  /*exec('mysql-ctl start', function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
-  });
+  });*/
   }
   
   build();

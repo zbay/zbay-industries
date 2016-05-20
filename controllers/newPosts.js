@@ -1,24 +1,15 @@
 var mysql = require('mysql');
+var dotenv = require('dotenv').load();
+var connection = mysql.createConnection(process.env.JAWSDB_URL);
 
 module.exports = function(app) {
     app.post("/newPost", function(req, res){
-    var connection = mysql.createConnection({
-        host: 'localhost',
-        user: req.body.username,
-        password: req.body.password,
-        database : process.env.DB_NAME
-    });
-    connection.connect(function(err) {
-  if (err) {
-    console.error('error connecting: ' + err.stack);
-    return;
-  }
-  else{
-      console.log(new Date());
-      console.log(new Date().toISOString().slice(0, 19).replace('T', ' '));
-      
-      var title = connection.escape(req.body.title);
-      
+    connection.query('SELECT * FROM users WHERE username=' + connection.escape(req.body.username) + ' AND password=SHA1(' + connection.escape(req.body.password) + ')',
+    function(error1, row){
+        if(error1 || !row || row.length < 1){
+            res.json({"error": "Failed to connect to the database. Perhaps your username or password are incorrect."});
+        }
+        else{
     connection.query('INSERT INTO blogposts (title, content, category, timePosted) VALUES (' 
         + connection.escape(req.body.title) + ', ' 
         + connection.escape(req.body.content) + ', '
@@ -28,30 +19,16 @@ module.exports = function(app) {
         if(error){
             console.log(error);
             res.json({"error": error});
-            connection.end();
         }        
         else{
             res.json({"success": "Blog post successfully saved!"});
-            connection.end();
+        }
+    });   
         }
     });
-  }
-});
     });
 
 app.post("/addComment", function(req, res){
-var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : process.env.DB_USER,
-  password : process.env.DB_PASSWORD,
-  database : process.env.DB_NAME
-}); 
-        connection.connect(function(err) {
-  if (err) {
-    console.error('error connecting: ' + err.stack);
-    return;
-  }
-  else{
       connection.query('INSERT INTO comments (postNum, author, content, timePosted) VALUES ('
         + connection.escape(req.body.commentData.postNum) + ', ' 
         + connection.escape(req.body.commentData.author) + ', ' 
@@ -61,17 +38,13 @@ var connection = mysql.createConnection({
         if(error){
             console.log(error);
             res.json({"error": error});
-            connection.end();
         }        
         else{
             connection.query('SELECT timePosted FROM comments ORDER BY timePosted DESC LIMIT 1', function(err, data){ //return the timestamp of the post you just made
                 res.json({"timePosted":  data[0].timePosted});
-                connection.end(); 
             });
         }
       }
       );
-  }
-  });
 });
 }
