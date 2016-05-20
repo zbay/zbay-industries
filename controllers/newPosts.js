@@ -64,7 +64,7 @@ var connection = mysql.createConnection({
             connection.end();
         }        
         else{
-            connection.query('SELECT timePosted FROM comments ORDER BY timePosted DESC LIMIT 1', function(err, data){
+            connection.query('SELECT timePosted FROM comments ORDER BY timePosted DESC LIMIT 1', function(err, data){ //return the timestamp of the post you just made
                 res.json({"timePosted":  data[0].timePosted});
                 connection.end(); 
             });
