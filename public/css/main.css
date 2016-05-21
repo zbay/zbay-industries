@@ -135,7 +135,9 @@ button {
   color: white;
   font-family: "Exo", sans-serif;
   background-color: #000066;
-  border: 2px solid #C0C0C0;
+  border: 2px solid #C0C0C0; }
+
+nav button {
   height: 100%; }
 
 #pageBar {

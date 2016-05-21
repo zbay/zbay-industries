@@ -9,7 +9,7 @@ module.exports = React.createClass({
       return {"posts": [], "isLoading": true};  
     },
     componentDidMount: function(){
-      let that = this;
+      var that = this;
       that.getPosts(that.props.page, that.props.category, that.props.query);  
       setTimeout(this.showError, 5000);
     },
@@ -25,7 +25,7 @@ module.exports = React.createClass({
         </div>);
     },
     getPosts: function(page, category, search){
-     let that = this;
+     var that = this;
      console.log("category: " + category);
      axios.post("/getPosts", {"page": parseInt(page), "category": category, "search": search})
      .then(function(response){
@@ -38,7 +38,7 @@ module.exports = React.createClass({
      });         
     },
     renderPosts: function(){
-        let that = this;
+        var that = this;
         if(that.state.posts && that.state.posts.length <= 0){
             if(!that.state.isLoading){
                 return (<div id="formError">We could not find any posts that fit your description! Look elsewhere or try again later.</div>);

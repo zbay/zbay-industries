@@ -26,7 +26,7 @@ module.exports = React.createClass({
       .attr("class", "tooltip")
       .attr("id", "infobox")
       .style("opacity", 0);  
-        let that = this;
+        var that = this;
           var dataURL = (averageType=="mean" ? (meanURL): (medianURL));
           var yAxisFormat = (renderPercent ? d3.format("%"): d3.format("d"));
         var chart = d3.select("#chart")
@@ -302,7 +302,7 @@ chart.append("g")
            ); 
     },
     onCategoryChange: function(e){
-        let that = this;
+        var that = this;
         var renderPercent = e.target.value.slice(-4) == "Prct";
         that.setState({"currentCategory": e.target.value, "renderPercent": renderPercent});
         var chartNode = document.getElementById("chart");
@@ -312,7 +312,7 @@ chart.append("g")
         that.visualize(e.target.value, renderPercent, that.state.currentAverage);
     },
     onAverageChange: function(e){
-        let that = this;
+        var that = this;
         that.setState({"currentAverage": e.target.value});
         var chartNode = document.getElementById("chart");
         while (chartNode.firstChild) {

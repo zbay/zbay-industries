@@ -49,7 +49,7 @@ onSearchChange: function(e){
     this.setState(state);
 },
 onSearchSubmit: function(){
-    let that = this;
+    var that = this;
         if(that.state.search.length > 0){
              BrowserHistory.push("/blog/posts/search/" + that.state.search + "/1");
         }

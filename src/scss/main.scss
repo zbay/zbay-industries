@@ -168,7 +168,9 @@ button{
     font-family:"Exo", sans-serif;
     background-color:$navy;
     border:2px solid $silver;
-    height:100%;
+}
+nav button{
+        height:100%;
 }
 #pageBar{ 
     max-width:70%;

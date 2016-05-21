@@ -48,7 +48,7 @@ module.exports = React.createClass({
         this.setState(state);
     },
     submitPost: function(){
-        let that = this;
+        var that = this;
         if(that.state.username.length > 0 && that.state.password.length > 0 && that.state.title.length > 0 && that.state.content.length > 0
         && that.state.category.length > 0){
         axios.post("/newPost", {"username": that.state.username, "password": that.state.password, "title": that.state.title.trim(),

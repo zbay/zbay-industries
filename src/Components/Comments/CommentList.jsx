@@ -9,7 +9,7 @@ module.exports = React.createClass({
         </div>);
     },
     renderComments: function(){
-        let that = this;
+        var that = this;
         if(that.props.comments && that.props.comments.length <= 0){
             return (<div id="noComments">There are no comments on this post yet.</div>);
         }

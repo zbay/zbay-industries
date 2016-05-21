@@ -12,7 +12,7 @@ module.exports = React.createClass({
         <br />
         <div className="postContent" dangerouslySetInnerHTML={this.rawMarkup(this.props.postData.content)}></div>
         <br />
-        <div className="postCategory">Filed Under: {this.props.postData.category} Rants</div>
+        <div className="postCategory">Filed Under: {this.props.postData.category}</div>
         <br />
         </div>);
     },

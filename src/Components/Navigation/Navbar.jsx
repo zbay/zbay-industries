@@ -6,7 +6,7 @@ var Navbar = React.createClass({
         return {"currentPage": ""};
     },
     componentDidMount: function(){
-        let that = this;
+        var that = this;
         switch(window.location.href){
             case "https://zbay-industries-zbay.c9users.io/portfolio":
                 that.setState({"currentPage": "portfolio"});
@@ -24,7 +24,7 @@ var Navbar = React.createClass({
         }
     },
     render: function(){
-        let that = this;
+        var that = this;
         return (<nav id="mainNav">
         <div className="navCol" id={that.state.currentPage == "home" ? ("currentNav") : ("")}>
         <Link to="/" onClick={this.showCurrentNav.bind(this, "home")}>Home</Link></div>

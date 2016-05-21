@@ -29,7 +29,7 @@ module.exports = React.createClass({
         </div>);
     },
     getPost: function(){
-     let that = this;
+     var that = this;
      axios.post("/getPost", {postNum: that.props.id})
      .then(function(response){
          if(response.data.error){
@@ -41,7 +41,7 @@ module.exports = React.createClass({
      });   
     },
     getComments: function(){
-      let that = this;
+      var that = this;
       axios.post("/getComments", {postNum: that.props.id})
       .then(function(response){
          if(response.data.error){
@@ -53,7 +53,7 @@ module.exports = React.createClass({
       });
     },
     postComment: function(commentData){
-        let that = this;
+        var that = this;
       axios.post("/addComment", {commentData: commentData})
       .then(function(response){
           if(response.data.error){

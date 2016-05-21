@@ -9,7 +9,7 @@ module.exports = React.createClass({
     render: function(){
         var showPrev = false;
         var showNext = true;
-        let that = this;
+        var that = this;
         if(Number(this.props.page) > 1){
             showPrev = true;
         }
