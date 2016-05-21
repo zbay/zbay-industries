@@ -101,7 +101,6 @@ chart.append("g")
         }
       })
       .on("mouseover", function(d, i){
-        console.log(d);
         var yearWord = d["YrsExp"] == 1 ? "year" : "years";
          var rect = d3.select(this);
          rect.attr("class", "mouseover");
@@ -109,7 +108,7 @@ chart.append("g")
           .duration(100)
           .style("opacity", 0.65)
           .style("left", (width*0.5) + "px")
-          .style("top", (height) + "px");
+          .style("top", (height*1.4) + "px");
           infobox.html("<br /><img class='logo' width='100' src='" + "../../img/logos/" + d["Team"] + ".png'" + "/><br /><br /><span class='name'>" + 
           (d["Coach"] != "Average" ? (d["Coach"]): ("NFL")) + ", " + (d["Coach"] != "Average" ? (d["Team"]): ("")) + " " + 
           (d["Coach"] != "Average" ? (d["Position"]) : ("average active HC or OC")) + "</span><br /><br /><span class='exactNumber'>" + 

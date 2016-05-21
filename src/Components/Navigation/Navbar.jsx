@@ -9,14 +9,30 @@ var Navbar = React.createClass({
         var that = this;
         switch(window.location.href){
             case "https://zbay-industries-zbay.c9users.io/portfolio":
+            case "http://zbay.io/portfolio":
+            case "http://www,zbay.io/portfolio":
+            case "https://zbay.io/portfolio":
+            case "https://www,zbay.io/portfolio":
+            case "www.zbay.io/portfolio":
+            case "zbay.io/portfolio":
                 that.setState({"currentPage": "portfolio"});
                 break;
             case "https://zbay-industries-zbay.c9users.io/":
             case "zbay-industries-zbay.c9users.io/":
             case "http://zbay-industries-zbay.c9users.io/":
+            case "zbay.io/":
+            case "www.zbay.io/":
+            case "http://www.zbay.io/":
+            case "https://zbay.io/":
+            case "https://www,zbay.io/":
                that.setState({"currentPage": "home"});
                break;
             case "https://zbay-industries-zbay.c9users.io/blog/posts/1":
+            case "https://zbay.io/blog/posts/1":
+            case "http://zbay.io/blog/posts/1":
+            case "www.zbay.io/blog/posts/1":
+            case "https://www.zbay.io/blog/posts/1":
+            case "http://www.zbay.io/blog/posts/1":
                 that.setState({"currentPage": "blog"});
                 break;
             default:

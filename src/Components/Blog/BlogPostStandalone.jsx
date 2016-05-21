@@ -63,7 +63,6 @@ module.exports = React.createClass({
               commentData.timePosted = response.data.timePosted;
               var newComments = that.state.comments;
               newComments.push(commentData);
-              console.log("newComments: " + newComments);
               that.setState({"comments": newComments});
           }
       });  

@@ -26,7 +26,6 @@ module.exports = React.createClass({
     },
     getPosts: function(page, category, search){
      var that = this;
-     console.log("category: " + category);
      axios.post("/getPosts", {"page": parseInt(page), "category": category, "search": search})
      .then(function(response){
          if(response.data.error){
