@@ -19,6 +19,7 @@ module.exports = React.createClass({
         <FormAlert errorMessage={this.state.errorMessage}/>
         {this.state.postData ? (<div className="blogPost"><h3 className="postTitleAlone">{this.state.postData.title || ""}</h3>
         <div className="postTime">{moment(this.state.postData.timePosted).format('MMMM Do YYYY, h:mm a')}</div>
+        <br />
         <div className="postContent" dangerouslySetInnerHTML={this.rawMarkup(this.state.postData.content || "")}></div>
         <div className="postCategory">Filed Under: {this.state.postData.category}</div>
         <br />

@@ -21,6 +21,7 @@ var Navbar = React.createClass({
             case "zbay-industries-zbay.c9users.io/":
             case "http://zbay-industries-zbay.c9users.io/":
             case "zbay.io/":
+            case "zbay.io":
             case "www.zbay.io/":
             case "http://www.zbay.io/":
             case "https://zbay.io/":
@@ -33,6 +34,7 @@ var Navbar = React.createClass({
             case "www.zbay.io/blog/posts/1":
             case "https://www.zbay.io/blog/posts/1":
             case "http://www.zbay.io/blog/posts/1":
+            case "zbay.io/blog/posts/1":
                 that.setState({"currentPage": "blog"});
                 break;
             default:

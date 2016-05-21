@@ -51,7 +51,7 @@ module.exports = React.createClass({
         </ul>
         <h3>Contact Zachary</h3>
         <p>If you want to say something about one of my blog posts, go comment on the post in question and I'll most likely reply.
-        If you're interested in hiring me, shoot me an email at ZLWilliams1@gmail.com.</p>
+        If you're interested in hiring me, shoot me an email at zachwilliams@zbay.io.</p>
         <br/>
         </div>
         );
