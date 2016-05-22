@@ -5,7 +5,9 @@ var path = require('path');
 var app = express();
 var Routes = require('./controllers');
 var enforce = require('express-sslify');
+var helmet = require('helmet')
 
+app.use(helmet());
 app.use(enforce.HTTPS({ trustProtoHeader: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
