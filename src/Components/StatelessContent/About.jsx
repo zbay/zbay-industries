@@ -50,8 +50,8 @@ module.exports = React.createClass({
         <li>Flask</li>
         </ul>
         <h3>Contact Zachary</h3>
-        <p>If you want to say something about one of my blog posts, go comment on the post in question and I'll most likely reply.
-        If you're interested in hiring me, shoot me an email at zachwilliams@zbay.io.</p>
+        <p>If you want to say something about one of my blog posts, go comment on the post in question and I'll probably reply.
+        If you're interested in hiring me, shoot me an email at <a href="mailto:zachwilliams@zbay.io">zachwilliams@zbay.io</a>.</p>
         <br/>
         </div>
         );
