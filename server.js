@@ -4,9 +4,9 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var app = express();
 var Routes = require('./controllers');
-var helmet = require('helmet');
+var enforce = require('express-sslify');
 
-app.use(helmet());
+app.use(enforce.HTTPS({ trustProtoHeader: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
