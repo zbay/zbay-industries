@@ -7,6 +7,7 @@ var Navbar = React.createClass({
     },
     componentDidMount: function(){
         var that = this;
+        console.log(window.location.href);
         switch(window.location.href){
             case "https://zbay-industries-zbay.c9users.io/portfolio":
             case "http://zbay.io/portfolio":
