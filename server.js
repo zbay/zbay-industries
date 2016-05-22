@@ -20,7 +20,11 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.get('*', function(req, res) {
-  res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+    if(req.headers['x-forwarded-proto']!='https'&&process.env.NODE_ENV === 'production')
+    res.redirect('https://'+req.hostname+req.url)
+  else{
+    res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+  }
 });
 
 Routes(app);
