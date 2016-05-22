@@ -26,6 +26,7 @@ var Navbar = React.createClass({
             case "http://www.zbay.io/":
             case "https://zbay.io/":
             case "https://www,zbay.io/":
+            case "https://www.zbay.io":
                that.setState({"currentPage": "home"});
                break;
             case "https://zbay-industries-zbay.c9users.io/blog/posts/1":
