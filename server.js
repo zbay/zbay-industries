@@ -7,11 +7,9 @@ var Routes = require('./controllers');
 var enforce = require('express-sslify');
 var helmet = require('helmet')
 
-app.use(helmet.noCache())
-app.use(helmet.frameguard({
-  action: 'allow-from',
-  domain: 'https://zbay.herokuapp.com/'
-}))
+app.use(helmet({
+  frameguard: false
+}));
 app.use(enforce.HTTPS({ trustProtoHeader: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
