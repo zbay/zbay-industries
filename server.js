@@ -3,9 +3,10 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
 var app = express();
-var api = require('./controllers');
 var Routes = require('./controllers');
+var helmet = require('helmet');
 
+app.use(helmet());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
