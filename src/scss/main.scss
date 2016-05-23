@@ -57,9 +57,16 @@ footer{
     [class*="col-"] {
         width: 100%;
     }
+    .row, .col-sm-4{
+        @include marginCentered();
+    }
     }
     @include fullCentered();
     img{
+        min-width:auto;
+        max-width:350px;
+        min-height:auto;
+        max-height:150px;
         border: 8px inset $silver;
         @include marginCentered();
     }
@@ -71,6 +78,9 @@ footer{
         margin-top:1%;
         text-align:center;
     }
+}
+.portfolioItem{
+    @include marginCentered();
 }
 @-moz-document url-prefix() { /*darker inset/outset borders in Firefox, which lightens them too much*/
     .jumbotron
@@ -149,6 +159,11 @@ nav, #newPost, #blogList, #commentForm, #formAlert, #listHeader, #noComments, #b
     text-align:left;
     border: 1px solid $navy;
     background-color:$blog_gray;
+    img{
+        max-width:99%;
+        margin-left:auto;
+        margin-right:auto;
+    }
 }
 #blogList, .blogPost{
     margin-bottom:10px;
@@ -302,5 +317,18 @@ select{
     }
     #chart{
      fill: url("./img/footballfield.png");   
+    }
+}
+@media only screen and (max-width: 700px) {
+    #portfolio img {
+        max-width: 250px;
+    }
+}
+@media only screen {
+    h1{
+        font-size:2.25em;
+    }
+    h2{
+        font-size:1.3em;
     }
 }

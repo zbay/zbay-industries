@@ -34,8 +34,15 @@ footer {
   text-align: center; }
   @media (max-width: 990px) {
     #portfolio [class*="col-"] {
-      width: 100%; } }
+      width: 100%; }
+    #portfolio .row, #portfolio .col-sm-4 {
+      margin-left: auto;
+      margin-right: auto; } }
   #portfolio img {
+    min-width: auto;
+    max-width: 350px;
+    min-height: auto;
+    max-height: 150px;
     border: 8px inset #C0C0C0;
     margin-left: auto;
     margin-right: auto; }
@@ -47,6 +54,10 @@ footer {
   #portfolio .caption {
     margin-top: 1%;
     text-align: center; }
+
+.portfolioItem {
+  margin-left: auto;
+  margin-right: auto; }
 
 @-moz-document url-prefix() {
   /*darker inset/outset borders in Firefox, which lightens them too much*/
@@ -117,6 +128,10 @@ nav, #newPost, #blogList, #commentForm, #formAlert, #listHeader, #noComments, #b
   text-align: left;
   border: 1px solid #000066;
   background-color: #ececec; }
+  .blogPost img {
+    max-width: 99%;
+    margin-left: auto;
+    margin-right: auto; }
 
 #blogList, .blogPost {
   margin-bottom: 10px; }
@@ -267,3 +282,13 @@ select {
 
 #nflViz #chart {
   fill: url("./img/footballfield.png"); }
+
+@media only screen and (max-width: 700px) {
+  #portfolio img {
+    max-width: 250px; } }
+
+@media only screen {
+  h1 {
+    font-size: 2.25em; }
+  h2 {
+    font-size: 1.25em; } }

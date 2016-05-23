@@ -10,14 +10,14 @@ module.exports = React.createClass({
         <br/>
         <div className="row">
             <div className="col-sm-4 col-md-4 col-lg-4">
+                <PortfolioItem url="https://opine-io.herokuapp.com/" 
+                thumbnail="../img/opine.png"
+                caption="April, 2016: A MERN stack app for soliciting and offering opinions on various topics"/>   
+            </div>
+            <div className="col-sm-4 col-md-4 col-lg-4">
                 <PortfolioItem url="https://have-a-word.herokuapp.com" 
                  thumbnail="../img/haveaword.png"
                  caption="May, 2016: A MERN stack app for ad-hoc chat rooms that can be password-protected and given a deadline for deletion."/>
-            </div>
-            <div className="col-sm-4 col-md-4 col-lg-4">
-                <PortfolioItem url="https://opine-io.herokuapp.com/" 
-                thumbnail="../img/opine.png"
-                caption="April, 2016: A MERN stack app for soliciting and offering opinions on various topics"/>    
             </div>
             <div className="col-sm-4 col-md-4 col-lg-4">
                 <PortfolioItem url="/visualizations/nfl_coaches_offense"
