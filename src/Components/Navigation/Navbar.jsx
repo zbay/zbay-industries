@@ -9,42 +9,17 @@ var Navbar = React.createClass({
         var that = this;
         var address = "" + window.location.href;
         console.log(address + " is this working???");
-        switch(address){
-            case "http://www,zbay.io/portfolio":
-            case "http://www,zbay.io/portfolio/":
-            case "https://zbay.io/portfolio":
-            case "https://zbay.io/portfolio/":
-            case "https://www,zbay.io/portfolio":
-            case "https://www,zbay.io/portfolio/":
-            case "https://zbay.herokuapp.com/portfolio":
-            case "https://zbay-industries-zbay.c9users.io/portfolio":
-                console.log("setting portfolio " + address);
-                that.setState({"currentPage": "portfolio"});
-                break;
-            case "http://www.zbay.io/":
-            case "http://www.zbay.io":
-            case "https://zbay.io/":
-            case "https://zbay.io":
-            case "https://www,zbay.io/":
-            case "https://www.zbay.io":
-            case "https://zbay.herokuapp.com/":
-            case "https://zbay-industries-zbay.c9users.io/":
-               console.log("setting home");
-               that.setState({"currentPage": "home"});
-               break;
-            case "https://zbay.io/blog/posts/1":
-            case "http://zbay.io/blog/posts/1":
-            case "https://www.zbay.io/blog/posts/1":
-            case "http://www.zbay.io/blog/posts/1":
-            case "https://zbay.herokuapp.com/blog/posts/1":
-            case "https://zbay-industries-zbay.c9users.io/blog/posts/1":
-                console.log("setting blog");
-                that.setState({"currentPage": "blog"});
-                break;
-            default:
-                console.log("setting blank... " + address);
-                that.setState({"currentPage": ""});
-                break;
+        if(address.indexOf("portfolio") > -1){
+            that.setState({"currentPage": "portfolio"});
+        }
+        else if(address.indexOf("blog/post") > -1){
+            that.setState({"currentPage": "blog"});
+        }
+        else if(address.length >= 20){
+            that.setState({"currentPage": "home"});
+        }
+        else{
+            that.setState({"currentPage": ""});
         }
     },
     render: function(){
