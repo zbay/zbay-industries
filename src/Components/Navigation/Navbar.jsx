@@ -7,8 +7,8 @@ var Navbar = React.createClass({
     },
     componentDidMount: function(){
         var that = this;
-        var address = window.location.href;
-        console.log(address);
+        var address = "" + window.location.href;
+        console.log(address + " is this working???");
         switch(address){
             case "http://www,zbay.io/portfolio":
             case "http://www,zbay.io/portfolio/":
@@ -17,7 +17,8 @@ var Navbar = React.createClass({
             case "https://www,zbay.io/portfolio":
             case "https://www,zbay.io/portfolio/":
             case "https://zbay.herokuapp.com/portfolio":
-                console.log("setting portfolio");
+            case "https://zbay-industries-zbay.c9users.io/portfolio":
+                console.log("setting portfolio " + address);
                 that.setState({"currentPage": "portfolio"});
                 break;
             case "http://www.zbay.io/":
@@ -27,6 +28,7 @@ var Navbar = React.createClass({
             case "https://www,zbay.io/":
             case "https://www.zbay.io":
             case "https://zbay.herokuapp.com/":
+            case "https://zbay-industries-zbay.c9users.io/":
                console.log("setting home");
                that.setState({"currentPage": "home"});
                break;
@@ -35,12 +37,14 @@ var Navbar = React.createClass({
             case "https://www.zbay.io/blog/posts/1":
             case "http://www.zbay.io/blog/posts/1":
             case "https://zbay.herokuapp.com/blog/posts/1":
+            case "https://zbay-industries-zbay.c9users.io/blog/posts/1":
                 console.log("setting blog");
                 that.setState({"currentPage": "blog"});
                 break;
             default:
-                console.log("setting blank...");
+                console.log("setting blank... " + address);
                 that.setState({"currentPage": ""});
+                break;
         }
     },
     render: function(){
