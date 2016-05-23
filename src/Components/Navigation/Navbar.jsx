@@ -15,6 +15,7 @@ var Navbar = React.createClass({
             case "https://zbay.io/portfolio/":
             case "https://www,zbay.io/portfolio":
             case "https://www,zbay.io/portfolio/":
+            case "https://zbay.herokuapp.com/portfolio":
                 that.setState({"currentPage": "portfolio"});
                 break;
             case "http://www.zbay.io/":
@@ -23,12 +24,14 @@ var Navbar = React.createClass({
             case "https://zbay.io":
             case "https://www,zbay.io/":
             case "https://www.zbay.io":
+            case "https://zbay.herokuapp.com/":
                that.setState({"currentPage": "home"});
                break;
             case "https://zbay.io/blog/posts/1":
             case "http://zbay.io/blog/posts/1":
             case "https://www.zbay.io/blog/posts/1":
             case "http://www.zbay.io/blog/posts/1":
+            case "https://zbay.herokuapp.com/blog/posts/1":
                 that.setState({"currentPage": "blog"});
                 break;
             default:
