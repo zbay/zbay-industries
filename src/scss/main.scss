@@ -98,6 +98,10 @@ background-repeat: repeat;
 }
 .portfolioItem{
     @include marginCentered();
+        #github{
+            border-bottom-color: $navy;
+            border-right-color: $navy;
+        }
 }
 @-moz-document url-prefix() { /*darker inset/outset borders in Firefox, which lightens them too much*/
     .jumbotron

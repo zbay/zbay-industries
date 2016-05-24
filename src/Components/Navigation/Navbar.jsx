@@ -8,7 +8,6 @@ var Navbar = React.createClass({
     componentDidMount: function(){
         var that = this;
         var address = "" + window.location.href;
-        console.log(address + " is this working???");
         if(address.indexOf("portfolio") > -1){
             that.setState({"currentPage": "portfolio"});
         }

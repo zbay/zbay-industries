@@ -27,20 +27,24 @@ module.exports = React.createClass({
             </div>
         </div>
         <div className="row">
-            <div className="col-sm-12 col-md-12 col-lg-12">
+             <div className="col-sm-4 col-md-4 col-lg-4"></div>
+            <div className="col-sm-4 col-md-4 col-lg-4">
                 <PortfolioItem url="http://www.ibiblio.org/paulgreen/index.html" thumbnail="../img/paulgreen.png"
                 height="175"
                 caption="November, 2015: A static website for a Chapel Hill nonprofit. To solidify
                 my front-end design skills, I volunteered to help a local nonprofit redesign their site 
                 for the first time since the late 1990's."/>
             </div>
+            <div className="col-sm-4 col-md-4 col-lg-4"></div>
         </div>
         <div className="row">
-            <div className="col-sm-12 col-md-12 col-lg-12">
+            <div className="col-sm-4 col-md-4 col-lg-4"></div>
+            <div className="col-sm-4 col-md-4 col-lg-4">
                  <PortfolioItem url="https://github.com/zbay" thumbnail="../img/zuperman2.png"
                  caption="My Github account, where you can find the repos for these projects"
-                 width="150"/>
+                 width="150" github="true"/>
             </div>
+            <div className="col-sm-4 col-md-4 col-lg-4"></div>
         </div>
         </div>);
     }
