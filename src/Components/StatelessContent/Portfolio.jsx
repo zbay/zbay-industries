@@ -37,7 +37,7 @@ module.exports = React.createClass({
         </div>
         <div className="row">
             <div className="col-sm-12 col-md-12 col-lg-12">
-                 <PortfolioItem url="https://github.com/zbay" thumbnail="../img/zuperman.jpg"
+                 <PortfolioItem url="https://github.com/zbay" thumbnail="../img/zuperman2.png"
                  caption="My Github account, where you can find the repos for these projects"
                  width="150"/>
             </div>
