@@ -5,7 +5,8 @@ var Navbar = require("./Navigation/Navbar");
 
 module.exports = React.createClass({
     render: function(){
-        return (<div><Jumbotron />
+        return (<div id="main">
+        <Jumbotron />
         <Navbar />
        {this.props.children}
        <Footer />

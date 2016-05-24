@@ -15,9 +15,6 @@ module.exports = React.createClass({
         Using free and cheap resources, including <a href="https://www.freecodecamp.com" target="_blank">FreeCodeCamp.com</a>, I taught myself 
         a full JavaScript stack. A committed and successful autodidact, 
         I am now positive that I can help almost any company in need of a JavaScript developer.</p>
-        <p>If a career in web development doesn't work out, my long term fallback will be to pursue a career as a professional poker player.
-        I am also an amateur philosopher, in the (very) early stages of writing a book about an orignal religious philosophy that I would describe 
-        with the label: "Darwinian Post-Stoicism".</p>
         <h3>Specialties</h3>
         <p>I am comfortable with the following languages or technologies:</p>
         <ul>

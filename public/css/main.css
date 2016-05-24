@@ -9,12 +9,25 @@ body {
   color: white;
   text-align: center;
   border-radius: 3px; }
-  .jumbotron h1 {
-    text-shadow: 3px 3px 1px #7BAFD4, -3px 3px 1px #7BAFD4, 3px -3px 1px #7BAFD4, -3px -3px 1px #7BAFD4; }
-  .jumbotron h2 {
-    text-shadow: 2px 2px 1px #7BAFD4, -2px 2px 1px #7BAFD4, 2px -2px 1px #7BAFD4, -2px -2px 1px #7BAFD4; }
 
-footer {
+.jumbotron h1 {
+  text-shadow: 3px 3px 1px #7BAFD4, -3px 3px 1px #7BAFD4, 3px -3px 1px #7BAFD4, -3px -3px 1px #7BAFD4; }
+
+.jumbotron h2 {
+  text-shadow: 2px 2px 1px #7BAFD4, -2px 2px 1px #7BAFD4, 2px -2px 1px #7BAFD4, -2px -2px 1px #7BAFD4; }
+
+#main {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  align-self: center;
+  width: 100%;
   font-size: 200%;
   text-align: center;
   border-radius: 3px;
@@ -25,6 +38,12 @@ footer {
   border: 8px outset #C0C0C0;
   -webkit-text-stroke-width: 1px; }
 
+.VertCenterTop {
+  align-self: flex-start; }
+
+.VertCenterBottom {
+  align-self: flex-end; }
+
 .jumbotron {
   border: 8px inset #C0C0C0; }
 
@@ -32,28 +51,32 @@ footer {
   margin-left: auto;
   margin-right: auto;
   text-align: center; }
-  @media (max-width: 990px) {
-    #portfolio [class*="col-"] {
-      width: 100%; }
-    #portfolio .row, #portfolio .col-sm-4 {
-      margin-left: auto;
-      margin-right: auto; } }
-  #portfolio img {
-    min-width: auto;
-    max-width: 350px;
-    min-height: auto;
-    max-height: 150px;
-    border: 8px inset #C0C0C0;
+
+@media (max-width: 990px) {
+  #portfolio [class*="col-"] {
+    width: 100%; }
+  #portfolio .row, #portfolio .col-sm-4 {
     margin-left: auto;
-    margin-right: auto; }
-  #portfolio .row {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    margin-bottom: 1%; }
-  #portfolio .caption {
-    margin-top: 1%;
-    text-align: center; }
+    margin-right: auto; } }
+
+#portfolio img {
+  min-width: auto;
+  max-width: 350px;
+  min-height: auto;
+  max-height: 150px;
+  border: 8px inset #C0C0C0;
+  margin-left: auto;
+  margin-right: auto; }
+
+#portfolio .row {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 1%; }
+
+#portfolio .caption {
+  margin-top: 1%;
+  text-align: center; }
 
 .portfolioItem {
   margin-left: auto;
@@ -64,7 +87,7 @@ footer {
   .jumbotron {
     border-bottom-color: #262626;
     border-right-color: #262626; }
-  footer {
+  #footer {
     border-top-color: #262626;
     border-left-color: #262626; }
   #portfolio img {
@@ -77,12 +100,14 @@ footer {
 #about {
   margin-left: 5%;
   margin-right: 5%; }
-  #about ul {
-    list-style-image: url("../img/computer.gif");
-    /*http://2css.com/graphics/computer.gif*/
-    vertical-align: bottom; }
-  #about li {
-    line-height: 100%; }
+
+#about ul {
+  list-style-image: url("../img/computer.gif");
+  /*http://2css.com/graphics/computer.gif*/
+  vertical-align: bottom; }
+
+#about li {
+  line-height: 100%; }
 
 .navCol {
   display: inline-block;
@@ -128,10 +153,11 @@ nav, #newPost, #blogList, #commentForm, #formAlert, #listHeader, #noComments, #b
   text-align: left;
   border: 1px solid #000066;
   background-color: #ececec; }
-  .blogPost img {
-    max-width: 99%;
-    margin-left: auto;
-    margin-right: auto; }
+
+.blogPost img {
+  max-width: 99%;
+  margin-left: auto;
+  margin-right: auto; }
 
 #blogList, .blogPost {
   margin-bottom: 10px; }
@@ -157,8 +183,9 @@ nav button {
 
 #pageBar {
   max-width: 70%; }
-  #pageBar button {
-    border-radius: 5px; }
+
+#pageBar button {
+  border-radius: 5px; }
 
 #listHeader, .postTitleAlone, #portfolioHeader {
   color: #000066;
@@ -174,11 +201,13 @@ nav button {
   margin-bottom: 3px;
   border: 1px solid #FFCD8D;
   background-color: #ececec; }
-  .comment img {
-    max-width: 99%; }
-  .comment td, .comment th {
-    border: 1px solid black;
-    padding: 2px; }
+
+.comment img {
+  max-width: 99%; }
+
+.comment td, .comment th {
+  border: 1px solid black;
+  padding: 2px; }
 
 .commentContent {
   padding-left: 5%;
@@ -204,8 +233,9 @@ nav button {
 #blogNav {
   margin-top: 10px;
   margin-bottom: 10px; }
-  #blogNav label {
-    line-height: 30px; }
+
+#blogNav label {
+  line-height: 30px; }
 
 #fourohfour {
   font-family: "Exo", sans-serif;
@@ -239,10 +269,12 @@ select {
 
 #nflViz .title {
   text-align: center; }
-  #nflViz .title #top {
-    text-decoration: underline; }
-  #nflViz .title a {
-    color: #FFD700; }
+
+#nflViz .title #top {
+  text-decoration: underline; }
+
+#nflViz .title a {
+  color: #FFD700; }
 
 #nflViz rect {
   fill: #8B7E66;

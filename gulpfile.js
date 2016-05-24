@@ -11,7 +11,7 @@ gulp.task('default', function() {
   var bundler = watchify(browserify({
     entries: ['./src/App.jsx'],
     transform: [reactify],
-    extensions: ['.jsx'],
+    extensions: ['.jsx', '.scss'],
     debug: true,
     cache: {},
     packageCache: {},
@@ -20,6 +20,7 @@ gulp.task('default', function() {
   
 gulp.src('src/scss/*.scss')
   .pipe(sass().on('error', sass.logError))
+  .pipe(sass({ noCache: true }))
   .pipe(gulp.dest('./public/css/'));
 
   function build(file) {

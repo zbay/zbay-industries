@@ -38,7 +38,18 @@ background-repeat: repeat;
         text-align:center;
         border-radius:3px;
 }
-footer{
+#main {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+#footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        align-self:center;
+        width:100%;
         font-size:200%;
         text-align:center;
         border-radius:3px;
@@ -48,6 +59,12 @@ footer{
         padding:40px;
         border: 8px outset $silver;
        -webkit-text-stroke-width: 1px;
+}
+.VertCenterTop{
+  align-self: flex-start;
+}
+.VertCenterBottom{
+  align-self: flex-end;
 }
 .jumbotron{
            border: 8px inset $silver; 
@@ -88,7 +105,7 @@ footer{
         border-bottom-color:$verydark_gray;
         border-right-color:$verydark_gray;
     }
-    footer{
+    #footer{
         border-top-color:$verydark_gray;
         border-left-color:$verydark_gray;     
     }
