@@ -30,7 +30,7 @@ module.exports = React.createClass({
         I have some experience with the following languages/technologies:
         <ul>
         <li>D3.js</li>
-        <li>AngularJS 1</li>
+        <li>AngularJS 1 and 2</li>
         <li>Java</li>
         <li>PHP</li>
         <li>Python</li>
@@ -38,7 +38,8 @@ module.exports = React.createClass({
         <br />
         I intend to learn more about the following technologies in the future, in approximate order of priority:
         <ul>
-        <li>AngularJS 2</li>
+        <li>AngularJS 2 (I've tinkered with the beta and many parts are still very buggy as of June, 2016. Will wait until an official release before making a full project with it.)
+        </li>
         <li>React Native and mobile app development</li>
         <li>Java (in greater depth) and Spark</li>
         <li>D3 (in greater depth) and SVG</li>

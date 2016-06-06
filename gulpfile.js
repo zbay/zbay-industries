@@ -6,6 +6,13 @@ var browserify = require('browserify');
 var watchify = require('watchify');
 var reactify = require('reactify');
 var exec = require('child_process').exec;
+var babelify = require('babelify');
+
+gulp.task('styles', function() {
+    gulp.src('./src/scss/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./public/css/'));
+});
 
 gulp.task('default', function() {
   var bundler = watchify(browserify({
@@ -23,9 +30,12 @@ gulp.src('src/scss/*.scss')
   .pipe(sass({ noCache: true }))
   .pipe(gulp.dest('./public/css/'));
 
+gulp.watch('./src/scss/*.scss', ['styles']);
+
   function build(file) {
     if (file) gutil.log('Recompiling ' + file);
     return bundler
+      .transform("babelify", {presets: ["es2015", "react"]})
       .bundle()
       .on('error', gutil.log.bind(gutil, 'Browserify Error'))
       .pipe(source('public/js/main.js'))
