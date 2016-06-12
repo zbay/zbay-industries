@@ -91,6 +91,18 @@ body {
     border-bottom-color: #262626;
     border-right-color: #262626; } }
 
+_::-webkit-full-page-media .jumbotron, _:future .jumbotron, :root .jumbotron {
+  border-bottom-color: #565656;
+  border-right-color: #565656; }
+
+_::-webkit-full-page-media #footer, _:future #footer, :root #footer {
+  border-top-color: #565656;
+  border-left-color: #565656; }
+
+_::-webkit-full-page-media #portfolio img, _:future #portfolio img, :root #portfolio img {
+  border-bottom-color: #565656;
+  border-right-color: #565656; }
+
 #currentNav {
   background-color: white; }
 

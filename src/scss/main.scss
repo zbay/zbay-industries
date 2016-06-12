@@ -4,6 +4,7 @@ $goalpost_gold: #FFD700;
 $blog_gray: #ececec;
 $nav_gray: #D3D3D3;
 $verydark_gray: #262626;
+$appledark_gray: #565656;
 $navy: #000066;
 
 @mixin marginCentered(){
@@ -118,6 +119,22 @@ background-repeat: repeat;
         border-right-color:$verydark_gray;
     }
 }
+_::-webkit-full-page-media, _:future, :root {
+    .jumbotron 
+    {
+        border-bottom-color:$appledark_gray;
+        border-right-color:$appledark_gray;
+    }
+    #footer{
+        border-top-color:$appledark_gray;
+        border-left-color:$appledark_gray;     
+    }
+    #portfolio img{
+        border-bottom-color:$appledark_gray;
+        border-right-color:$appledark_gray;
+    }
+}
+
 
 #currentNav{
     background-color:white;

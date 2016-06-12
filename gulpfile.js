@@ -8,7 +8,7 @@ var reactify = require('reactify');
 var exec = require('child_process').exec;
 var babelify = require('babelify');
 
-gulp.task('styles', function() {
+gulp.task('styles', function() { //transpile scss to css
     gulp.src('./src/scss/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./public/css/'));
@@ -25,12 +25,12 @@ gulp.task('default', function() {
     fullPaths: true
   }));
   
-gulp.src('src/scss/*.scss')
+gulp.src('src/scss/*.scss') //initial compile transpile of scss to css
   .pipe(sass().on('error', sass.logError))
   .pipe(sass({ noCache: true }))
   .pipe(gulp.dest('./public/css/'));
 
-gulp.watch('./src/scss/*.scss', ['styles']);
+gulp.watch('./src/scss/*.scss', ['styles']); //watch for scss changes
 
   function build(file) {
     if (file) gutil.log('Recompiling ' + file);

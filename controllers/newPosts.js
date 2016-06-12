@@ -3,8 +3,8 @@ var dotenv = require('dotenv').load();
 var connection = mysql.createConnection(process.env.JAWSDB_URL);
 
 module.exports = function(app) {
-    app.post("/newPost", function(req, res){
-    connection.query('SELECT * FROM users WHERE username=' + connection.escape(req.body.username) + ' AND password=SHA1(' + connection.escape(req.body.password) + ')',
+    app.post("/newPost", function(req, res){ //make a new post
+    connection.query('SELECT * FROM users WHERE username=' + connection.escape(req.body.username) + ' AND password=SHA1(' + connection.escape(req.body.password) + ')', //authenticate user
     function(error1, row){
         if(error1 || !row || row.length < 1){
             res.json({"error": "Failed to connect to the database. Perhaps your username or password are incorrect."});
@@ -28,7 +28,7 @@ module.exports = function(app) {
     });
     });
 
-app.post("/addComment", function(req, res){
+app.post("/addComment", function(req, res){ //post a comment
       connection.query('INSERT INTO comments (postNum, author, content, timePosted) VALUES ('
         + connection.escape(req.body.commentData.postNum) + ', ' 
         + connection.escape(req.body.commentData.author) + ', ' 

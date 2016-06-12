@@ -27,7 +27,7 @@ module.exports = React.createClass({
         <li>MySQL</li>
         </ul>
         <br />
-        I have some experience with the following languages/technologies:
+        <p>I have some experience with the following languages/technologies:</p>
         <ul>
         <li>D3.js</li>
         <li>AngularJS 1 and 2</li>
@@ -36,7 +36,7 @@ module.exports = React.createClass({
         <li>Python</li>
         </ul>
         <br />
-        I intend to learn more about the following technologies in the future, in approximate order of priority:
+        <p>I intend to learn more about the following technologies in the future, in approximate order of priority:</p>
         <ul>
         <li>AngularJS 2 (I've tinkered with the beta and many parts are still very buggy as of June, 2016. Will wait until an official release before making a full project with it.)
         </li>
