@@ -10,7 +10,7 @@ var helmet = require('helmet')
 app.use(helmet({
   frameguard: false
 }));
-app.use(enforce.HTTPS({ trustProtoHeader: true }));
+//app.use(enforce.HTTPS({ trustProtoHeader: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({

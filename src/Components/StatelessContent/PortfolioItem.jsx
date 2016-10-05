@@ -4,7 +4,6 @@ var Link = ReactRouter.Link;
 
 module.exports = React.createClass({
     render: function(){
-        console.log("github: " + this.props.github);
         if(this.props.personalSite){
         return (<div className="portfolioItem">
         <Link to={this.props.url}><img src={this.props.thumbnail}/></Link>
