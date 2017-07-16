@@ -1,3 +1,5 @@
+// remember to run gulp default to build after changes
+
 var http = require('http');
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -27,5 +29,5 @@ app.get('*', function(req, res) {
 
 Routes(app);
 
-console.log("Listening on Port 8080");
+console.log("Listening on Port 8080: localhost:8080");
 var server = app.listen(process.env.PORT || 8080);
