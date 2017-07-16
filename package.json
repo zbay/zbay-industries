@@ -36,5 +36,9 @@
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^2.4.0"
   },
+  "engine-strict": true,
+  "engines": {
+    "node": "6.11.1"
+  },
   "devDependencies": {}
 }
