@@ -17,9 +17,16 @@ $navy: #000066;
 }
 
 body{
-background-image: url("../img/whitecarbonfiber.jpg"); /*http://decalpitstop.com/wallpaper/1280x800/white%20carbon%20fiber.jpg */
-background-repeat: repeat;
-}
+    background:
+    linear-gradient(27deg, #d9d9d9 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #d9d9d9 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #f2f2f2 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #f2f2f2 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #d9d9d9 10px, transparent 10px),
+    linear-gradient(#d9d9d9 25%, #e6e6e6 25%, #e6e6e6 50%, transparent 50%, transparent 75%, #f2f2f2 75%, #f2f2f2);
+    background-color: white;
+    background-size: 20px 20px;
+  }
 .jumbotron{
         background: url("../img/blue-wood-background.jpg") repeat;
         font-family: 'Exo', sans-serif;
