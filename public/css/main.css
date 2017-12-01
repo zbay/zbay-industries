@@ -1,7 +1,5 @@
 body {
-  background: linear-gradient(27deg, #d9d9d9 5px, transparent 5px) 0 5px, linear-gradient(207deg, #d9d9d9 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #f2f2f2 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #f2f2f2 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #d9d9d9 10px, transparent 10px), linear-gradient(#d9d9d9 25%, #e6e6e6 25%, #e6e6e6 50%, transparent 50%, transparent 75%, #f2f2f2 75%, #f2f2f2);
-  background-color: white;
-  background-size: 20px 20px; }
+  background: url("../img/knitted-netting.png") repeat; }
 
 .jumbotron {
   background: url("../img/blue-wood-background.jpg") repeat;
@@ -33,7 +31,7 @@ body {
   font-family: 'Exo', sans-serif;
   color: white;
   padding: 40px;
-  border: 8px outset #C0C0C0;
+  border: 8px inset #C0C0C0;
   -webkit-text-stroke-width: 1px; }
 
 .VertCenterTop {
@@ -43,7 +41,7 @@ body {
   align-self: flex-end; }
 
 .jumbotron {
-  border: 8px inset #C0C0C0; }
+  border: 8px outset #C0C0C0; }
 
 #portfolio {
   margin-left: auto;
@@ -57,9 +55,9 @@ body {
       margin-right: auto; } }
   #portfolio img {
     min-width: auto;
-    max-width: 350px;
+    max-width: 250px;
     min-height: auto;
-    max-height: 150px;
+    height: 150px;
     border: 8px inset #C0C0C0;
     margin-left: auto;
     margin-right: auto; }
@@ -78,6 +76,8 @@ body {
   .portfolioItem #github {
     border-bottom-color: #000066;
     border-right-color: #000066; }
+  .portfolioItem img {
+    max-width: 25%; }
 
 @-moz-document url-prefix() {
   /*darker inset/outset borders in Firefox, which lightens them too much*/
@@ -153,8 +153,8 @@ nav, #newPost, #blogList, #commentForm, #formAlert, #listHeader, #noComments, #b
   font-family: 'Exo', sans-serif; }
 
 .blogPost {
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
   padding-left: 5%;
   padding-right: 5%;
   text-align: left;
@@ -166,7 +166,8 @@ nav, #newPost, #blogList, #commentForm, #formAlert, #listHeader, #noComments, #b
     margin-right: auto; }
 
 #blogList, .blogPost {
-  margin-bottom: 10px; }
+  margin-top: 15px;
+  margin-bottom: 15px; }
 
 nav a {
   font-family: 'Exo', sans-serif;
@@ -322,3 +323,10 @@ select {
     font-size: 2.25em; }
   h2 {
     font-size: 1.3em; } }
+
+#zach {
+  float: right;
+  max-width: 150px;
+  border: 8px inset #C0C0C0;
+  margin-left: 10px;
+  margin-bottom: 10px; }
