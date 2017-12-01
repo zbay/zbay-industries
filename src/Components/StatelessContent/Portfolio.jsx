@@ -23,7 +23,7 @@ module.exports = React.createClass({
                     Pickup basketball, online games, volunteer projects, and business promotions, among other possible use cases"/>             
             </div>
             <div className="col-sm-4 col-md-4 col-lg-4">
-                <PortfolioItem url="http://18.222.1.167/" 
+                <PortfolioItem url="http://ec2-18-222-1-167.us-east-2.compute.amazonaws.com/" 
                 thumbnail="../img/nw.png"
                 caption="September, 2017: A Django (full stack Python) app, with SQLAlchemy and jQuery, for browsing headlines and making notes to self"/>   
             </div>
