@@ -17,7 +17,7 @@ module.exports = React.createClass({
                 Zachary has at last determined that software development is probably a good way to make a living.</p>
                 <p>
                     A double major in political science and information science at the esteemed University of North Carolina (Chapel Hill), Zach can think big. He thinks in terms of corporations, 
-                    governments, ideologies, technology trends, and global systems. But he can also think <em>small</em>.
+                    governments, ideologies, technology trends, and the systems that tie them together. But he can also think <em>small</em>.
                     He can think like a web browser, a front-end framework, a database, a server, a compiler, or a machine learning algorithm depending on what the job entails. 
                     He's willing to roll up his sleeves and get his hands dirty by helping to wrangle a messy codebase into something better.
                 </p>
