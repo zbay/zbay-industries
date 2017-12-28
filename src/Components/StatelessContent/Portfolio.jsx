@@ -12,12 +12,12 @@ module.exports = React.createClass({
         <br />
         <div className="row">
             <div className="col-sm-4 col-md-4 col-lg-4">
-                <PortfolioItem url="http://18.220.68.81/" 
+                <PortfolioItem url="http://13.58.216.66/about" 
                 thumbnail="../img/chartmanheader.png"
                 caption="December, 2017: A MERN stack app, allowing users to track equity prices and technical indicators. Shows charts on demand, generated with D3.js."/>   
             </div>
             <div className="col-sm-4 col-md-4 col-lg-4">
-                <PortfolioItem url="http://13.58.160.141/" 
+                <PortfolioItem url="http://13.58.160.141/about" 
                 thumbnail="../img/p2.png"
                 caption="November, 2017: A social media platform, built on the MEAN stack, that allows users to advertise events to the public or to friends. 
                     Pickup basketball, online games, volunteer projects, and business promotions, among other possible use cases"/>             

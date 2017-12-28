@@ -30,7 +30,7 @@ module.exports = React.createClass({
                     Because he can better understand them as they relate to the quality of a customer's experience, at the intuitive level.
                 </p>
                 <p>
-                    Thinking on the large scale yet capable on the small scale, Zach brings an uncommon combination of <em>broad perspective</em>, <em>attention to detail</em>, and <em>inquisitiveness</em> that make him a quick learner and an asset to any
+                    Thoughtful on the large scale yet capable on the small scale, Zach brings an uncommon combination of <em>broad perspective</em>, <em>attention to detail</em>, and <em>inquisitiveness</em> that make him a quick learner and an asset to any
                     software development team. Email him at zlwilliams@protonmail.com if you would like to learn more.
                 </p>
             </div>
