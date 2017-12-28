@@ -12,9 +12,9 @@ module.exports = React.createClass({
         <br />
         <div className="row">
             <div className="col-sm-4 col-md-4 col-lg-4">
-                <PortfolioItem url="http://18.216.49.91/" 
-                thumbnail="../img/p2blogo.png"
-                caption="October, 2017: An Angular 4 and Node app, built on the Yelp API, that serves as a day planner"/>   
+                <PortfolioItem url="http://18.220.68.81/" 
+                thumbnail="../img/chartmanheader.png"
+                caption="December, 2017: A MERN stack app, allowing users to track equity prices and technical indicators. Shows charts on demand, generated with D3.js."/>   
             </div>
             <div className="col-sm-4 col-md-4 col-lg-4">
                 <PortfolioItem url="http://13.58.160.141/" 
@@ -23,16 +23,16 @@ module.exports = React.createClass({
                     Pickup basketball, online games, volunteer projects, and business promotions, among other possible use cases"/>             
             </div>
             <div className="col-sm-4 col-md-4 col-lg-4">
-                <PortfolioItem url="http://ec2-18-222-1-167.us-east-2.compute.amazonaws.com/" 
-                thumbnail="../img/nw.png"
-                caption="September, 2017: A Django (full stack Python) app, with SQLAlchemy and jQuery, for browsing headlines and making notes to self"/>   
+                <PortfolioItem url="http://18.216.49.91/" 
+                thumbnail="../img/p2blogo.png"
+                caption="October, 2017: An Angular 4 and Node app, built on the Yelp API, that serves as a day planner"/>   
             </div>
         </div>
         <div className="row">
             <div className="col-sm-4 col-md-4 col-lg-4">
-                <PortfolioItem url="https://opine-io.herokuapp.com/" 
-                thumbnail="../img/opine.png"
-                caption="April, 2016: A MERN stack app for soliciting and offering opinions on various topics"/>   
+                <PortfolioItem url="http://ec2-18-222-1-167.us-east-2.compute.amazonaws.com/" 
+                thumbnail="../img/nw.png"
+                caption="September, 2017: A Django (full stack Python) app, with SQLAlchemy and jQuery, for browsing headlines and making notes to self"/>   
             </div>
             <div className="col-sm-4 col-md-4 col-lg-4">
                 <PortfolioItem url="https://have-a-word.herokuapp.com" 

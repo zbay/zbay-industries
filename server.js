@@ -1,4 +1,4 @@
-// remember to run gulp default to build after changes
+// remember to run "gulp default" to build after changes
 
 var http = require('http');
 var express = require('express');
