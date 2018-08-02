@@ -15,8 +15,6 @@ module.exports = React.createClass({
             <option value="Career">Career</option>
             <option value="Life">Life</option>
             <option value="Tech">Tech</option>
-            <option value="Politics">Politics</option>
-            <option value="Culture">Pop Culture</option>
             <option value="Sports">Sports</option>
             <option value="Miscellaneous">Miscellaneous</option>
         </select>

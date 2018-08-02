@@ -12,6 +12,11 @@ module.exports = React.createClass({
         <br />
         <div className="row">
             <div className="col-sm-4 col-md-4 col-lg-4">
+                <PortfolioItem url="http://places2b.zbay.xyz" 
+                thumbnail="../img/p2blogo.png"
+                caption="August, 2018: An Angular 6 and Node app, built with the Yelp API, that serves as a day planner"/>   
+            </div>
+            <div className="col-sm-4 col-md-4 col-lg-4">
                 <PortfolioItem url="http://13.58.216.66/about" 
                 thumbnail="../img/chartmanheader.png"
                 caption="December, 2017: A MERN stack app, allowing users to track equity prices and technical indicators. Shows charts on demand, generated with D3.js."/>   
@@ -21,11 +26,6 @@ module.exports = React.createClass({
                 thumbnail="../img/p2.png"
                 caption="November, 2017: A social media platform, built on the MEAN stack, that allows users to advertise events to the public or to friends. 
                     Pickup basketball, online games, volunteer projects, and business promotions, among other possible use cases"/>             
-            </div>
-            <div className="col-sm-4 col-md-4 col-lg-4">
-                <PortfolioItem url="http://18.216.49.91/" 
-                thumbnail="../img/p2blogo.png"
-                caption="October, 2017: An Angular 4 and Node app, built on the Yelp API, that serves as a day planner"/>   
             </div>
         </div>
         <div className="row">
